@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.example.org/animaizinhos" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/animaizinhos" elementFormDefault="qualified">
+    <xs:element name="animaizinhos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="animal" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="comum" type="xs:string" minOccurs="1"></xs:element>
+                            <xs:element name="cientifico" type="xs:string" minOccurs="1"></xs:element>
+                            <xs:element name="estado" type="xs:string" minOccurs="1"></xs:element>
+							<xs:element name="populacao" type="xs:string" minOccurs="0"></xs:element>
+							<xs:element name="altura" type="xs:string" minOccurs="0"></xs:element>
+							<xs:element name="peso" type="xs:string" minOccurs="0"></xs:element>
+							<xs:element name="tamanho" type="xs:string" minOccurs="0"></xs:element>
+							<xs:element name="habitat" type="xs:string" minOccurs="0"></xs:element>
+							<xs:element name="sobre" type="xs:string" minOccurs="0"></xs:element>
+							<xs:element name="localizacao" type="xs:string" minOccurs="0"></xs:element>
+							<xs:element name="photos" type="xs:string" minOccurs="0"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
