@@ -7,6 +7,6 @@ Trabalho 2
 
 Coteudo
 Animais em extinção
-https://endangeredanimals.docs.apiary.io/#reference/0/habitat/get:-/all_animal_data
+https://www.worldwildlife.org/species/directory?direction=desc&sort=extinction_status
 
 Menu com os tipos de animais (Aves, Repteis, etc)
