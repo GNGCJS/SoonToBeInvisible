@@ -18,24 +18,24 @@
                             <xs:element name="altura" type="xs:string"></xs:element>
                             <xs:element name="peso" type="xs:string"></xs:element>
                             <xs:element name="tamanho" type="xs:string"></xs:element>
-                            <xs:element name="habitats" minOccurs="0" maxOccurs="unbounded">
+                            <xs:element name="habitats">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="habitat" type="xs:string"></xs:element>
+                                        <xs:element name="habitat" type="xs:string" maxOccurs="unbounded"></xs:element>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
                             <xs:element name="sobre" type="xs:string"></xs:element>
                             <xs:element name="localizacoes"><xs:complexType>
                                 <xs:sequence>
-                                    <xs:element name="localizacao" type="xs:string"></xs:element>
+                                    <xs:element name="localizacao" type="xs:string" maxOccurs="unbounded"></xs:element>
                                 </xs:sequence>
                             </xs:complexType>
                         </xs:element>
                             <xs:element name="photos">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="photo" type="xs:anyURI"></xs:element>
+                                        <xs:element name="photo" type="xs:anyURI" maxOccurs="unbounded"></xs:element>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
