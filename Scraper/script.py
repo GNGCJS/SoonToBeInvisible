@@ -210,11 +210,9 @@ def xml(arr):
             foto.text = photo
         animal.append(fotos)
 
-    struct = xt.ElementTree(animais)
     xmlstr = minidom.parseString(xt.tostring(animais)).toprettyxml(indent="    ")
     with open("teste.xml", "a") as f:
         f.write(xmlstr)
-        #struct.write(f)
 
 if __name__ == "__main__":
     main()
