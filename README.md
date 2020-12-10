@@ -3,9 +3,9 @@
 Repositório para guardar o proejto desenvolvido para a cadeira de Tecnologias de Internet.
 
 Desenvolvido por:
-- [@GustavoNascimento]https://github.com/guuuu
-- [@GonçaloCalisto]https://github.com/GandaCalisto
-- [@JoaoSaraiva]https://github.com/9saraiva8
+- [@GustavoNascimento](https://github.com/guuuu)
+- [@GonçaloCalisto](https://github.com/GandaCalisto)
+- [@JoaoSaraiva](https://github.com/9saraiva8)
 
 # Descrição do tema escolhido
 
