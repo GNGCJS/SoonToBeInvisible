@@ -13,8 +13,8 @@ O nosso projeto tem como objetivo apresentar os animais em via de extinção per
 
 # Organização do repositório
 
-- O código fonte encontra-se na pasta [src]https://github.com/GNGCJS/SoonToBeInvisible/tree/Production/src
-- Os capitulos do relatório estão na pasta [doc]https://github.com/GNGCJS/SoonToBeInvisible/tree/Production/doc
+- O código fonte encontra-se na pasta [src](https://github.com/GNGCJS/SoonToBeInvisible/tree/Production/src)
+- Os capitulos do relatório estão na pasta [doc](https://github.com/GNGCJS/SoonToBeInvisible/tree/Production/doc)
 
 # Galeria
 
