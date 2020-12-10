@@ -30,3 +30,26 @@ O nosso projeto tem como objetivo apresentar os animais em via de extinção per
 
 - NodeJS
 - Express
+
+# Relatório
+
+### Apresentação do projeto
+* C1: [Apresentação do Projeto](https://github.com/GNGCJS/SoonToBeInvisible/blob/Production/doc/c1.md)
+
+### Interface do utilizador
+
+* C2: [Interface e mapa do website](https://github.com/GNGCJS/SoonToBeInvisible/blob/Production/doc/c2.md)
+
+### Produto
+
+* C3: [Produto](https://github.com/GNGCJS/SoonToBeInvisible/blob/Production/doc/c3.md)
+
+### Apresentação
+
+* C4: [Apresentação](https://github.com/GNGCJS/SoonToBeInvisible/blob/Production/doc/c4.md)
+
+
+### Equipa
+- [@GustavoNascimento](https://github.com/guuuu)
+- [@GonçaloCalisto](https://github.com/GandaCalisto)
+- [@JoaoSaraiva](https://github.com/9saraiva8)
