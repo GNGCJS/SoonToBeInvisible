@@ -1,7 +1,32 @@
 # Soon To Be Invisible
 
-Perante a proposta de trabalho que o professor nos propôs e depois de discutido entre todos os elementos do grupo, o tema para o nosso trabalho irá ser sobre animais em via de extinção.
+Repositório para guardar o proejto desenvolvido para a cadeira de Tecnologias de Internet.
 
-O nosso projeto tem como objetivo apresentar os animais em via de extinção perante a informação que esta disponível no seguinte website: https://www.worldwildlife.org/ . Recorrendo ao site referido anteriormente, o nosso principal objetivo é mostrar a informação de cada animal, como por exemplo o seu habitat, a sua localização, o seu estado, algumas fotos entre outros detalhes sendo que toda a informação que foi recolhida esta guardada num ficheiro XML gerado por um web scraper programado em python . Em relação a estrutura do nosso projeto, além de referências de cada animal vamos apresentar uma secção de contacto e outra que irá conter informações sobre o projeto. Tendo em conta os requisitos mínimos que o professor indicou, na parte de back-end optamos por utilizar a framework express do node js.
+Desenvolvido por:
+- [@GustavoNascimento]https://github.com/guuuu
+- [@GonçaloCalisto]https://github.com/GandaCalisto
+- [@JoaoSaraiva]https://github.com/9saraiva8
 
-Após um intenso debate escolhemos este tema porque é um fator preocupante nos dias de hoje e o nosso objetivo é tentar alarmar as pessoas do mundo para preservar e tentar ajudar os poucos animais que nos restam.
+# Descrição do tema escolhido
+
+O nosso projeto tem como objetivo apresentar os animais em via de extinção perante a informação que esta disponível no seguinte website: https://www.worldwildlife.org/ . Recorrendo ao site referido anteriormente, o nosso principal objetivo é mostrar a informação de cada animal, como por exemplo o seu habitat, a sua localização, o seu estado, algumas fotos entre outros detalhes sendo que toda a informação que foi recolhida esta guardada num ficheiro XML gerado por um web scraper programado em python . Em relação a estrutura do nosso projeto, além de referências de cada animal vamos apresentar uma secção de contacto e outra que irá conter informações sobre o projeto. Tendo em conta os requisitos mínimos indicados pelo professor, iremos optar por utilizar a framework express do node js para criar o servidor, e a informação sobre os animais irá ser carregada em server-side, sendo que ainda temos que explorar se iremos usar alguma framework para fazer o mesmo.
+
+# Organização do repositório
+
+- O código fonte encontra-se na pasta [src]https://github.com/GNGCJS/SoonToBeInvisible/tree/Production/src
+- Os capitulos do relatório estão na pasta [doc]https://github.com/GNGCJS/SoonToBeInvisible/tree/Production/doc
+
+# Galeria
+
+# Tecnologias
+
+- XML
+- HTML5
+- Css3
+- Javascript
+- Python
+
+# Frameworks
+
+- NodeJS
+- Express
