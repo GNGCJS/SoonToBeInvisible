@@ -50,6 +50,6 @@ O nosso projeto tem como objetivo apresentar os animais em via de extinção per
 
 
 ### Equipa
-- Gustavo Nascimento [@GustavoNascimento](https://github.com/guuuu)
-- Gonçalo Calisto [@GonçaloCalisto](https://github.com/GandaCalisto)
-- João Saraiva [@JoaoSaraiva](https://github.com/9saraiva8)
+- Gustavo Nascimento A034534 [@GustavoNascimento](https://github.com/guuuu)
+- Gonçalo Calisto A034549 [@GonçaloCalisto](https://github.com/GandaCalisto)
+- João Saraiva A035000 [@JoaoSaraiva](https://github.com/9saraiva8)
