@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<animais 
+	xmlns="http://www.soontobeinvisible.org/animais" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.soontobeinvisible.org/animais schema.xsd">
+  
+	<animal>
+		<comum>African Elephant</comum>
+		<cientifico>Loxodonta africana</cientifico>
+		<estado>Vulnerable</estado>
+		<populacao>Approximately 415,000 in the wild</populacao>
+		<altura>Shoulder height is 11 feet</altura>
+		<peso>6 tons "t h i c c"</peso>
+		<tamanho>19-24 feet</tamanho>
+		<habitats>
+			<habitat>Tropical and Subtropical Moist Broadleaf Forests</habitat>
+			<habitat>Flooded Grasslands and Savannahs</habitat>
+			<habitat>Miombo woodlands</habitat>
+			<habitat>Acacia savannahs</habitat>
+		</habitats>
+		<sobre>Forest elephants, a distinct subspecies of African elephants, are uniquely adapted to the forest habitat of the Congo Basin,
+			 but are in sharp decline due to poaching for the international ivory trade. 
+			 It is estimated that probably one quarter to one third of the total African elephant population is made up of forest elephants. 
+			 \n The presence of African elephants helps to maintain suitable habitats for many other species. In central African forests, up to 30 percent of tree species may require elephants to help with dispersal and germination. 
+			 They play a pivotal role in shaping their habitat because of the enormous impact they have on factors ranging from fresh water to forest cover.</sobre>
+		<localizacoes>
+			<localizacao>Congo Basin</localizacao>
+			<localizacao>Coastal East Africa</localizacao>
+		</localizacoes>
+		<photos>
+			<photo>https://c402277.ssl.cf1.rackcdn.com/photos/8290/images/story_full_width/MID_48341.jpg?1422390852</photo>
+			<photo>https://c402277.ssl.cf1.rackcdn.com/photos/7599/images/story_full_width/MID_206795.jpg?1412711895</photo>
+			<photo>https://c402277.ssl.cf1.rackcdn.com/photos/7167/images/story_full_width/MID_301373.jpg?1405435092</photo>
+		</photos>
+	  </animal>
+	  
+</animais>

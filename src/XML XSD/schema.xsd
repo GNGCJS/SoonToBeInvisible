@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    xmlns="http://www.soontobeinvisible.org/animais" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://www.soontobeinvisible.org/animais" 
+    elementFormDefault="qualified">
+
+    <xs:element name="animais">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="animal" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="comum" type="xs:string"></xs:element>
+                            <xs:element name="cientifico" type="xs:string"></xs:element>
+                            <xs:element name="estado" type="xs:string"></xs:element>
+                            <xs:element name="populacao" type="xs:string"></xs:element>
+                            <xs:element name="altura" type="xs:string"></xs:element>
+                            <xs:element name="peso" type="xs:string"></xs:element>
+                            <xs:element name="tamanho" type="xs:string"></xs:element>
+                            <xs:element name="habitats">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="habitat" type="xs:string" maxOccurs="unbounded"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="sobre" type="xs:string"></xs:element>
+                            <xs:element name="localizacoes"><xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="localizacao" type="xs:string" maxOccurs="unbounded"></xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                            <xs:element name="photos">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="photo" type="xs:anyURI" maxOccurs="unbounded"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
