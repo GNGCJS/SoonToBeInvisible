@@ -1,17 +1,14 @@
 import os
 import time
-import json
 import logging
 import unidecode
 from xml.dom import minidom
 from datetime import datetime
 from selenium import webdriver
 import xml.etree.ElementTree as xt
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
 def main():
-    os.chdir("./Scraper")
+    os.chdir("./src/Scraper")
     t = time.time()
     default_url = "https://www.worldwildlife.org"
     basic_info = []
@@ -144,11 +141,7 @@ def main():
 
                 animals.append(obj)
                 counter += 1
-                print(f"Added a new animal {counter} - {qtd} / {qtd - counter} to go")
-
-                with open("animals.json", "w", encoding="utf-8") as f:
-                    json.dump(animals, f, indent=4)
-                
+                print(f"Added a new animal {counter} - {qtd} / {qtd - counter} to go")                
             except Exception as ex:
                 print(f"Error {ex}")
 
@@ -162,11 +155,15 @@ def main():
 
 def xml(arr):
     animais = xt.Element("animais")
-
+    id_counter = 0
     for obj in arr:
         animal = xt.Element("animal")
 
         animais.append(animal)
+
+        animal_id = xt.SubElement(animal, "id")
+        animal_id.text = str(id_counter)
+        id_counter += 1
 
         comum = xt.SubElement(animal, "comum")
         comum.text = obj["Comum"]
@@ -211,7 +208,7 @@ def xml(arr):
         animal.append(fotos)
 
     xmlstr = minidom.parseString(xt.tostring(animais)).toprettyxml(indent="    ")
-    with open("teste.xml", "a") as f:
+    with open("data.xml", "a") as f:
         f.write(xmlstr)
 
 if __name__ == "__main__":
