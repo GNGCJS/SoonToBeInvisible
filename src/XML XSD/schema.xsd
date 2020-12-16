@@ -11,6 +11,7 @@
                 <xs:element name="animal" minOccurs="1" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
+                            <xs:element name="id" type="xs:nonNegativeInteger"></xs:element>
                             <xs:element name="comum" type="xs:string"></xs:element>
                             <xs:element name="cientifico" type="xs:string"></xs:element>
                             <xs:element name="estado" type="xs:string"></xs:element>
