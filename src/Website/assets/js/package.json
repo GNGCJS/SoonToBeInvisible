@@ -1,0 +1,23 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GNGCJS/SoonToBeInvisible.git"
+  },
+  "author": "Gustavo Nascimento, Gonçalo Calisto, João Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GNGCJS/SoonToBeInvisible/issues"
+  },
+  "homepage": "https://github.com/GNGCJS/SoonToBeInvisible#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
