@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Exo', sans-serif;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.index{
+    background-image: url("../images/fundo animais.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.navbar_mobile{
+    position: absolute;
+    visibility: hidden;
+}
+
+.navbar{
+    width: 90%;
+    margin-left: 5%;
+    position: fixed;
+    z-index: 1;
+}
+
+.navbar .content{
+    text-align: center;
+}
+
+.navbar .fundo{
+    vertical-align: middle;
+    width: 10%;
+    border: 2px solid #FFFFFF;
+    display: inline-block;
+    text-align: center;
+    border-top: none;
+    background-color: rgba(171, 167, 190, 70)
+}
+
+.navbar .nav_active{
+    background-color: rgba(113, 101, 167, 70);
+}
+
+.navbar a, .navbar a:visited{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.navbar a:hover{
+    background-color: rgba(148, 144, 171, 70);
+    -webkit-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -o-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.navbar .nav_active:hover {
+    background-color: rgba(93, 81, 145, 70);
+    -webkit-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -o-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.navbar .texto{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1vw;
+}
+
+@media only screen and (max-width: 1024px) {
+    .navbar{
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .navbar_mobile{
+        position: fixed;
+        bottom: 0;
+        visibility: visible;
+        width: 100%;
+        min-width: 250px;
+        text-align: center;
+    }
+
+    .navbar_mobile a{
+        display: inline-block;
+        border: 2px solid #FFFFFF;
+        border-bottom: none;
+        width: 20%;
+        min-width: 50px;
+        height: 20%;
+        max-height: 20% !important;
+    }
+
+    .navbar_mobile .icon{
+        width: 7vw;
+        min-width: 50px !important;
+        height: auto;
+        vertical-align: middle;
+        padding: 10px;
+    }
+
+    .navbar_mobile .fundo{
+        background-color: rgba(171, 167, 190, 100);
+    }
+
+    .navbar_mobile .nav_active{
+        background-color: rgba(113, 101, 167, 100);
+    }
+}
