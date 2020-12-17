@@ -8,7 +8,8 @@
     margin: 0;
 }
 
-.index{
+/*fundo da página*/
+.animais{
     background-image: url("../images/fundo animais.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -17,7 +18,9 @@
     -o-background-size: cover;
     background-size: cover;
 }
+/*fim fundo da página*/
 
+/*navbar igual para todas as páginas*/
 .navbar_mobile{
     position: absolute;
     visibility: hidden;
@@ -34,18 +37,10 @@
     text-align: center;
 }
 
-.navbar .fundo{
-    vertical-align: middle;
-    width: 10%;
-    border: 2px solid #FFFFFF;
-    display: inline-block;
-    text-align: center;
-    border-top: none;
-    background-color: rgba(171, 167, 190, 70)
-}
-
-.navbar .nav_active{
-    background-color: rgba(113, 101, 167, 70);
+.navbar .texto{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1vw;
 }
 
 .navbar a, .navbar a:visited{
@@ -55,8 +50,24 @@
     display: inline-block;
     vertical-align: middle;
 }
+/*fim navbar igual para todas as páginas*/
 
-.navbar a:hover{
+/*propriedades diferentes para as navbars de cada página*/
+.animais .navbar .fundo{
+    vertical-align: middle;
+    width: 10%;
+    border: 2px solid #FFFFFF;
+    display: inline-block;
+    text-align: center;
+    border-top: none;
+    background-color: rgba(171, 167, 190, 70)
+}
+
+.animais .navbar .nav_active{
+    background-color: rgba(113, 101, 167, 70);
+}
+
+.animais .navbar a:hover{
     background-color: rgba(148, 144, 171, 70);
     -webkit-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     -moz-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -64,21 +75,17 @@
     transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.navbar .nav_active:hover {
+.animais .navbar .nav_active:hover {
     background-color: rgba(93, 81, 145, 70);
     -webkit-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     -moz-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     -o-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-
-.navbar .texto{
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 1vw;
-}
+/*fim propriedades diferentes para as navbars de cada página*/
 
 @media only screen and (max-width: 1024px) {
+    /*navbar mobile igual para todas as páginas*/
     .navbar{
         position: absolute;
         visibility: hidden;
@@ -110,12 +117,15 @@
         vertical-align: middle;
         padding: 10px;
     }
+    /*fim navbar mobile igual para todas as páginas*/
 
-    .navbar_mobile .fundo{
+    /*fundo navar mobile diferente para todas as páginas*/
+    .animais .navbar_mobile .fundo{
         background-color: rgba(171, 167, 190, 100);
     }
 
-    .navbar_mobile .nav_active{
+    .animais .navbar_mobile .nav_active{
         background-color: rgba(113, 101, 167, 100);
     }
+    /*fim fundo navar mobile diferente para todas as páginas*/
 }
