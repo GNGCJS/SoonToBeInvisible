@@ -8,6 +8,39 @@
     padding: 0;
     margin: 0;
 }
+/*navbar igual para todas as páginas*/
+.navbar_mobile{
+    position: absolute;
+    visibility: hidden;
+}
+
+.navbar{
+    width: 90%;
+    margin-left: 5%;
+    position: fixed;
+    z-index: 1;
+}
+
+.navbar .content{
+    text-align: center;
+}
+
+.navbar .texto{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1vw;
+}
+
+.navbar a, .navbar a:visited{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+/*fim navbar igual para todas as páginas*/
+
+
 
 /*fundo da página*/
 .index{
@@ -96,4 +129,142 @@
     .index .content .options{
         flex-direction: column;
     }
+}
+
+@media only screen and (max-width: 1024px) {
+    /*navbar mobile igual para todas as páginas*/
+    .navbar{
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .navbar_mobile{
+        position: fixed;
+        bottom: 0;
+        visibility: visible;
+        width: 100%;
+        min-width: 250px;
+        text-align: center;
+    }
+
+    .navbar_mobile a{
+        display: inline-block;
+        border: 2px solid #FFFFFF;
+        border-bottom: none;
+        width: 20%;
+        min-width: 50px;
+        height: 20%;
+        max-height: 20% !important;
+    }
+
+    .navbar_mobile .icon{
+        width: 7vw;
+        min-width: 50px !important;
+        height: auto;
+        vertical-align: middle;
+        padding: 10px;
+    }
+}
+/*fundo da página sobre */
+.sobre{
+background-image: url("../images/fundo sobre.png");
+background-repeat: no-repeat;
+background-attachment: fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+/*fim fundo da página*/
+.sobre .navbar .fundo{
+vertical-align: middle;
+width: 10%;
+border: 2px solid #FFFFFF;
+display: inline-block;
+text-align: center;
+border-top: none;
+background-color: rgba(20, 120, 175, 70)
+
+}
+
+.sobre .navbar .nav_active{
+background-color: rgba(0, 54, 84, 70);
+}
+
+.sobre .navbar a:hover{
+background-color: rgba(11, 83, 122, 70);
+-webkit-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+-moz-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+-o-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.sobre .navbar .nav_active:hover {
+background-color: rgba(0, 54, 84, 70);
+-webkit-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+-moz-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+-o-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+/*fundo navar mobile diferente para todas as páginas*/
+.sobre .navbar_mobile .fundo{
+background-color: rgba(20, 120, 175, 70);
+}
+
+.sobre .navbar_mobile .nav_active{
+background-color: rgba(0, 54, 84, 70);
+}
+/*fim fundo navar mobile diferente para todas as páginas*/
+
+.sobre .rect{
+width: 80%;
+height: 75%;
+background-color:rgba(20, 120, 175, 70);
+position: absolute;
+top:0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+opacity: 0.80;
+border-radius: 30px;
+overflow:auto;
+
+}
+.sobre .rect_text{
+color: white;
+font-size: 18px;
+width: 75%;
+height: 75%;
+position: absolute;
+top:0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+word-wrap: wrap break-word;
+}
+.sobre .ull{
+margin-left: 50px;
+}
+/* width */
+.sobre ::-webkit-scrollbar {
+width: 10px;
+}
+
+/* Track */
+.sobre ::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px transparent; 
+border-radius: 10px;
+}
+
+/* Handle */
+.sobre ::-webkit-scrollbar-thumb {
+background:rgba(0, 54, 84, 70);
+border-radius: 10px;
+}
+
+/* Handle on hover */
+.sobre ::-webkit-scrollbar-thumb:hover {
+background:rgba(0, 54, 84, 70)
 }
