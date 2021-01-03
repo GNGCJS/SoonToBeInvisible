@@ -21,6 +21,10 @@
     z-index: 1;
 }
 
+.contacto .navbar{
+    top: 0;
+}
+
 .navbar .content{
     text-align: center;
 }
@@ -51,6 +55,17 @@
     -o-background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
+}
+
+.contacto{
+    background-image: url("../images/fundo contacto.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
 }
 /*fim fundo da página*/
 
@@ -165,6 +180,24 @@
         vertical-align: middle;
         padding: 10px;
     }
+
+    .contacto input{
+        width: 100% !important;
+    }
+
+    .contacto .formulario p{
+        border: none !important; 
+        width: 100% !important;
+        text-align: left;
+    }
+
+    .contacto textarea{
+        width: 100% !important;
+    }
+    
+    .contacto .msg{
+        height: 27px !important;
+    }
 }
 /*fundo da página sobre */
 .sobre{
@@ -207,6 +240,38 @@ background-color: rgba(0, 54, 84, 70);
 -o-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
+/* contactos */
+.contacto .navbar .fundo{
+    vertical-align: middle;
+    width: 10%;
+    border: 2px solid #FFFFFF;
+    display: inline-block;
+    text-align: center;
+    border-top: none;
+    background-color: rgba(166, 185, 199, 70)
+}
+
+.contacto .navbar .nav_active{
+    background-color: rgba(0, 54, 84, 70);
+}
+
+.contacto .navbar a:hover{
+    background-color: rgba(135, 157, 173, 70);
+    -webkit-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -o-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.contacto .navbar .nav_active:hover {
+    background-color: rgba(83, 109, 129, 70);
+    -webkit-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -o-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
 /*fundo navar mobile diferente para todas as páginas*/
 .sobre .navbar_mobile .fundo{
 background-color: rgba(20, 120, 175, 70);
@@ -215,6 +280,19 @@ background-color: rgba(20, 120, 175, 70);
 .sobre .navbar_mobile .nav_active{
 background-color: rgba(0, 54, 84, 70);
 }
+
+.contacto .navbar_mobile .fundo{
+    background-color: rgba(166, 185, 199, 70);
+}
+
+.contacto .navbar_mobile .fundo:hover{
+    background-color: rgba(135, 157, 173, 70);
+}
+
+.contacto .navbar_mobile .nav_active{
+    background-color: rgba(0, 54, 84, 70);
+}
+
 /*fim fundo navar mobile diferente para todas as páginas*/
 
 .sobre .rect{
@@ -265,4 +343,67 @@ border-radius: 10px;
 
 .sobre ::-webkit-scrollbar-thumb:hover {
 background:rgba(0, 54, 84, 70)
+}
+
+/* contactos */
+
+.contacto .tudoMenosNav{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.contacto .intro {
+    background-color: rgba(166, 185, 199, 0.9);
+    padding: 50px 75px 50px 75px;
+    text-align: center;
+}
+
+.contacto .formulario{
+    background-color: rgba(166, 185, 199, 0.9);
+    margin: 50px 0px 50px 0px;
+    padding: 10px 75px 25px 75px;
+    text-align: center;
+}
+
+.contacto input {
+    background-color: rgba(0,0,0,0) ;
+    border: 3px solid white;
+    width: 80%;
+    height: 26px;
+    color:white;
+  }
+
+  .contacto textarea {
+    background-color: rgba(0,0,0,0);
+    border: 3px solid white;
+    width: 80%;
+    height: 75px;
+    color:white;
+    resize: vertical;
+}
+
+.contacto .formulario p{
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 20%;
+    float:left;
+}
+
+.contacto .mais1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contacto .msg{
+    height: 75px;
+}
+
+.contacto .botao{
+    color:white;
+    width: 60%;
+    height: 75px;
+    font-size:x-large;
 }
