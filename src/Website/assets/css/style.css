@@ -131,8 +131,9 @@
     }
 }
 
+/*navbar mobile igual para todas as páginas*/
 @media only screen and (max-width: 1024px) {
-    /*navbar mobile igual para todas as páginas*/
+    
     .navbar{
         position: absolute;
         visibility: hidden;
@@ -247,24 +248,21 @@ word-wrap: wrap break-word;
 .sobre .ull{
 margin-left: 50px;
 }
-/* width */
+/* sideBar */
 .sobre ::-webkit-scrollbar {
 width: 10px;
 }
 
-/* Track */
 .sobre ::-webkit-scrollbar-track {
 box-shadow: inset 0 0 5px transparent; 
 border-radius: 10px;
 }
 
-/* Handle */
 .sobre ::-webkit-scrollbar-thumb {
 background:rgba(0, 54, 84, 70);
 border-radius: 10px;
 }
 
-/* Handle on hover */
 .sobre ::-webkit-scrollbar-thumb:hover {
 background:rgba(0, 54, 84, 70)
 }
