@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
-<animais>
+<animais 	xmlns="http://www.soontobeinvisible.org/animais" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.soontobeinvisible.org/animais schema.xsd">
     <animal>
         <id>0</id>
         <comum>African Elephant</comum>
