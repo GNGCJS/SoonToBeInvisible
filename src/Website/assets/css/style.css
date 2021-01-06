@@ -146,63 +146,6 @@
     }
 }
 
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-* {
-    font-family: 'Exo', sans-serif;
-    box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-/*navbar igual para todas as páginas*/
-.animais .navbar_mobile{
-    position: absolute;
-    visibility: hidden;
-    margin-bottom: -100px;
-}
-
-.animais .navbar{
-    width: 90%;
-    margin-left: 5%;
-    position: fixed;
-    z-index: 1;
-}
-
-.animais .navbar .content{
-    text-align: center;
-}
-
-.animais .navbar .texto{
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 1vw;
-}
-
-.animais .navbar a, .animais .navbar a:visited{
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    display: inline-block;
-    vertical-align: middle;
-}
-/*fim navbar igual para todas as páginas*/
-
-.animais{
-    background-image: url("../images/fundo animais.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-}
-
-/*propriedades diferentes para as navbars de cada página*/
-.animais .navbar .fundo{
-=======
 /*navbar mobile igual para todas as páginas*/
 @media only screen and (max-width: 1024px) {
     
@@ -300,14 +243,232 @@ transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
 /* contactos */
 .contacto .navbar .fundo{
->>>>>>> 590b267d0ccb1383297d01fbebf5458d5e395006
     vertical-align: middle;
     width: 10%;
     border: 2px solid #FFFFFF;
     display: inline-block;
     text-align: center;
     border-top: none;
-<<<<<<< HEAD
+    background-color: rgba(166, 185, 199, 70)
+}
+
+.contacto .navbar .nav_active{
+    background-color: rgba(0, 54, 84, 70);
+}
+
+.contacto .navbar a:hover{
+    background-color: rgba(135, 157, 173, 70);
+    -webkit-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -o-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.contacto .navbar .nav_active:hover {
+    background-color: rgba(83, 109, 129, 70);
+    -webkit-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -o-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/*fundo navar mobile diferente para todas as páginas*/
+.sobre .navbar_mobile .fundo{
+background-color: rgba(20, 120, 175, 70);
+}
+
+.sobre .navbar_mobile .nav_active{
+background-color: rgba(0, 54, 84, 70);
+}
+
+.contacto .navbar_mobile .fundo{
+    background-color: rgba(166, 185, 199, 70);
+}
+
+.contacto .navbar_mobile .fundo:hover{
+    background-color: rgba(135, 157, 173, 70);
+}
+
+.contacto .navbar_mobile .nav_active{
+    background-color: rgba(0, 54, 84, 70);
+}
+
+/*fim fundo navar mobile diferente para todas as páginas*/
+
+.sobre .rect{
+width: 80%;
+height: 75%;
+background-color:rgba(20, 120, 175, 70);
+position: absolute;
+top:0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+opacity: 0.80;
+border-radius: 30px;
+overflow:auto;
+
+}
+.sobre .rect_text{
+color: white;
+font-size: 18px;
+width: 75%;
+height: 75%;
+position: absolute;
+top:0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+word-wrap: wrap break-word;
+}
+.sobre .ull{
+margin-left: 50px;
+}
+/* sideBar */
+.sobre ::-webkit-scrollbar {
+width: 10px;
+}
+
+.sobre ::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px transparent; 
+border-radius: 10px;
+}
+
+.sobre ::-webkit-scrollbar-thumb {
+background:rgba(0, 54, 84, 70);
+border-radius: 10px;
+}
+
+.sobre ::-webkit-scrollbar-thumb:hover {
+background:rgba(0, 54, 84, 70)
+}
+
+/* contactos */
+
+.contacto .tudoMenosNav{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.contacto .intro {
+    background-color: rgba(166, 185, 199, 0.9);
+    padding: 50px 75px 50px 75px;
+    text-align: center;
+}
+
+.contacto .formulario{
+    background-color: rgba(166, 185, 199, 0.9);
+    margin: 50px 0px 50px 0px;
+    padding: 10px 75px 25px 75px;
+    text-align: center;
+}
+
+.contacto input {
+    background-color: rgba(0,0,0,0) ;
+    border: 3px solid white;
+    width: 80%;
+    height: 26px;
+    color:white;
+  }
+
+  .contacto textarea {
+    background-color: rgba(0,0,0,0);
+    border: 3px solid white;
+    width: 80%;
+    height: 75px;
+    color:white;
+    resize: vertical;
+}
+
+.contacto .formulario p{
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+    width: 20%;
+    float:left;
+}
+
+.contacto .mais1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contacto .msg{
+    height: 75px;
+}
+
+.contacto .botao{
+    color:white;
+    width: 60%;
+    height: 75px;
+    font-size:x-large;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Exo', sans-serif;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*navbar igual para todas as páginas*/
+.animais .navbar_mobile{
+    position: absolute;
+    visibility: hidden;
+    margin-bottom: -100px;
+}
+
+.animais .navbar{
+    width: 90%;
+    margin-left: 5%;
+    position: fixed;
+    z-index: 1;
+}
+
+.animais .navbar .content{
+    text-align: center;
+}
+
+.animais .navbar .texto{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1vw;
+}
+
+.animais .navbar a, .animais .navbar a:visited{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+/*fim navbar igual para todas as páginas*/
+
+.animais{
+    background-image: url("../images/fundo animais.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+/*propriedades diferentes para as navbars de cada página*/
+.animais .navbar .fundo{
+    vertical-align: middle;
+    width: 10%;
+    border: 2px solid #FFFFFF;
+    display: inline-block;
+    text-align: center;
+    border-top: none;
     background-color: rgba(171, 167, 190, 70)
 }
 
@@ -584,163 +745,4 @@ transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     .animais{
         overflow-x: scroll;
     }
-=======
-    background-color: rgba(166, 185, 199, 70)
-}
-
-.contacto .navbar .nav_active{
-    background-color: rgba(0, 54, 84, 70);
-}
-
-.contacto .navbar a:hover{
-    background-color: rgba(135, 157, 173, 70);
-    -webkit-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    -moz-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    -o-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.contacto .navbar .nav_active:hover {
-    background-color: rgba(83, 109, 129, 70);
-    -webkit-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    -moz-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    -o-transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition: .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-/*fundo navar mobile diferente para todas as páginas*/
-.sobre .navbar_mobile .fundo{
-background-color: rgba(20, 120, 175, 70);
-}
-
-.sobre .navbar_mobile .nav_active{
-background-color: rgba(0, 54, 84, 70);
-}
-
-.contacto .navbar_mobile .fundo{
-    background-color: rgba(166, 185, 199, 70);
-}
-
-.contacto .navbar_mobile .fundo:hover{
-    background-color: rgba(135, 157, 173, 70);
-}
-
-.contacto .navbar_mobile .nav_active{
-    background-color: rgba(0, 54, 84, 70);
-}
-
-/*fim fundo navar mobile diferente para todas as páginas*/
-
-.sobre .rect{
-width: 80%;
-height: 75%;
-background-color:rgba(20, 120, 175, 70);
-position: absolute;
-top:0;
-bottom: 0;
-left: 0;
-right: 0;
-margin: auto;
-opacity: 0.80;
-border-radius: 30px;
-overflow:auto;
-
-}
-.sobre .rect_text{
-color: white;
-font-size: 18px;
-width: 75%;
-height: 75%;
-position: absolute;
-top:0;
-bottom: 0;
-left: 0;
-right: 0;
-margin: auto;
-word-wrap: wrap break-word;
-}
-.sobre .ull{
-margin-left: 50px;
-}
-/* sideBar */
-.sobre ::-webkit-scrollbar {
-width: 10px;
-}
-
-.sobre ::-webkit-scrollbar-track {
-box-shadow: inset 0 0 5px transparent; 
-border-radius: 10px;
-}
-
-.sobre ::-webkit-scrollbar-thumb {
-background:rgba(0, 54, 84, 70);
-border-radius: 10px;
-}
-
-.sobre ::-webkit-scrollbar-thumb:hover {
-background:rgba(0, 54, 84, 70)
-}
-
-/* contactos */
-
-.contacto .tudoMenosNav{
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 100px;
-    margin-top: 100px;
-}
-
-.contacto .intro {
-    background-color: rgba(166, 185, 199, 0.9);
-    padding: 50px 75px 50px 75px;
-    text-align: center;
-}
-
-.contacto .formulario{
-    background-color: rgba(166, 185, 199, 0.9);
-    margin: 50px 0px 50px 0px;
-    padding: 10px 75px 25px 75px;
-    text-align: center;
-}
-
-.contacto input {
-    background-color: rgba(0,0,0,0) ;
-    border: 3px solid white;
-    width: 80%;
-    height: 26px;
-    color:white;
-  }
-
-  .contacto textarea {
-    background-color: rgba(0,0,0,0);
-    border: 3px solid white;
-    width: 80%;
-    height: 75px;
-    color:white;
-    resize: vertical;
-}
-
-.contacto .formulario p{
-    border-top: 3px solid white;
-    border-left: 3px solid white;
-    border-bottom: 3px solid white;
-    width: 20%;
-    float:left;
-}
-
-.contacto .mais1 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.contacto .msg{
-    height: 75px;
-}
-
-.contacto .botao{
-    color:white;
-    width: 60%;
-    height: 75px;
-    font-size:x-large;
->>>>>>> 590b267d0ccb1383297d01fbebf5458d5e395006
 }
