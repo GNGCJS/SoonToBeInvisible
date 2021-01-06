@@ -97,3 +97,342 @@
         flex-direction: column;
     }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Exo', sans-serif;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*navbar igual para todas as páginas*/
+.animais .navbar_mobile{
+    position: absolute;
+    visibility: hidden;
+    margin-bottom: -100px;
+}
+
+.animais .navbar{
+    width: 90%;
+    margin-left: 5%;
+    position: fixed;
+    z-index: 1;
+}
+
+.animais .navbar .content{
+    text-align: center;
+}
+
+.animais .navbar .texto{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1vw;
+}
+
+.animais .navbar a, .animais .navbar a:visited{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+/*fim navbar igual para todas as páginas*/
+
+.animais{
+    background-image: url("../images/fundo animais.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+/*propriedades diferentes para as navbars de cada página*/
+.animais .navbar .fundo{
+    vertical-align: middle;
+    width: 10%;
+    border: 2px solid #FFFFFF;
+    display: inline-block;
+    text-align: center;
+    border-top: none;
+    background-color: rgba(171, 167, 190, 70)
+}
+
+.animais .navbar .nav_active{
+    background-color: rgba(113, 101, 167, 70);
+}
+
+.animais .navbar a:hover{
+    background-color: rgba(148, 144, 171, 70);
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+.animais .navbar .nav_active:hover {
+    background-color: rgba(93, 81, 145, 70);
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+/*fim propriedades diferentes para as navbars de cada página*/
+
+
+.animais .searchbar {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    border: 2px solid #FFFFFF;
+    width: 80%;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+.animais .searchbar .wrapper{
+    max-width: 4%;
+    text-align: center;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+.animais .searchbar .icon{
+    position: static;
+    color: #FFFFFF;
+    font-size: calc(15px + 1.2vw);
+}
+
+.animais .searchbar .search{
+    position: absolute;
+    top: 0;
+    left: 4%;
+    width: 96%;
+    height: 100%;
+    padding-left: 20px;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    border-left: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.animais .searchbar .search:focus{
+    outline: none;
+}
+
+.animais .container{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 20%;
+    justify-content: center;
+    padding-bottom: 200px;
+}
+
+.animais .container .carta{
+    margin: 2.5%;
+    border: 2px solid #FFFFFF;
+    width: 20%;
+    float: left;
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -o-transition: .7s;
+    transition: .7s;
+}
+
+
+.animais .container .carta .header{
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    background-color: rgba(171, 167, 190, 0.7);
+    height: 100px;
+    vertical-align: middle;
+    /* border: 2px solid red; */
+}
+
+.animais .container .carta .header .nome_animal{
+    font-size: calc(10px + 1.2vw);
+}
+
+.animais .container .carta .body{
+    height: 100%;
+    background-color: rgba(171, 167, 190, 0.7);
+    color: #FFFFFF;
+    padding: 30px 0px 60px;
+    text-align: center;
+    /* border: 2px solid green; */
+}
+
+.animais .container .carta .body .imagem_animal{
+    width: 90%;
+    height: auto;
+}
+
+.animais .container .carta .footer .sobre{
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    color: #FFFFFF;
+    font-size: calc(10px + 1vw);
+    vertical-align: middle;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    border-top: 2px solid #FFFFFF;
+    padding: 10px;
+    /* border: 2px solid blue; */
+}
+
+.animais .container .carta .footer .sobre:hover{
+    background-color: #FFFFFF;
+    color: #ABA7BE;
+    cursor: pointer;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+.animais .container .carta .footer .sobre:focus{
+    outline: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .animais .navbar{
+        position: absolute;
+        visibility: hidden;
+        margin-top: -50px;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+    }
+
+    .animais .navbar_mobile{
+        position: fixed;
+        bottom: 0;
+        visibility: visible;
+        width: 100%;
+        min-width: 250px;
+        margin-bottom: 0px;
+        text-align: center;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+    }
+
+    .animais .navbar_mobile a{
+        display: inline-block;
+        border: 2px solid #FFFFFF;
+        border-bottom: none;
+        width: 20%;
+        min-width: 50px;
+        height: 20%;
+        max-height: 20% !important;
+    }
+
+    .animais .navbar_mobile .icon{
+        width: 7vw;
+        min-width: 50px !important;
+        height: auto;
+        vertical-align: middle;
+        padding: 10px;
+    }
+    /*fim navbar mobile igual para todas as páginas*/
+
+    /*fundo navar mobile diferente para todas as páginas*/
+    .animais .navbar_mobile .fundo{
+        background-color: rgba(171, 167, 190, 100);
+    }
+
+    .animais .navbar_mobile .nav_active{
+        background-color: rgba(113, 101, 167, 100);
+    }
+    /*fim fundo navar mobile diferente para todas as páginas*/
+
+    .animais .searchbar .wrapper{
+        opacity: 0;
+        visibility: hidden;
+        width: 0px;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+    }
+
+    .animais .searchbar .search{
+        width: 100%;
+        left: 0;
+        border: none;
+    }
+
+    .animais .searchbar{
+        top: 5%;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+    }
+
+}
+
+@media only screen and (max-width: 1350px){
+    .animais .container .carta{
+        margin: 2.5%;
+        border: 2px solid #FFFFFF;
+        width: 28%;
+        float: left;
+        -webkit-transition: .7s;
+        -moz-transition: .7s;
+        -o-transition: .7s;
+        transition: .7s;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .animais .container .carta{
+        margin: 2.5%;
+        border: 2px solid #FFFFFF;
+        width: 45%;
+        float: left;
+        -webkit-transition: .7s;
+        -moz-transition: .7s;
+        -o-transition: .7s;
+        transition: .7s;
+    }
+}
+
+@media only screen and (max-width: 590px){
+    .animais .container .carta{
+        margin: 2.5%;
+        border: 2px solid #FFFFFF;
+        width: 95%;
+        float: left;
+        -webkit-transition: .7s;
+        -moz-transition: .7s;
+        -o-transition: .7s;
+        transition: .7s;
+    }
+
+    .animais .container .carta .header{
+        height: unset;
+        /* font-size: calc(20px + 1.2vw); */
+    }
+}
+
+@media only screen and (max-width: 268px){
+    .animais{
+        overflow-x: scroll;
+    }
+}
