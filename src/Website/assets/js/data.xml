@@ -93,7 +93,7 @@ xsi:schemaLocation="http://www.soontobeinvisible.org/animais schema.xsd">
             <localizacao> Coral Triangle</localizacao>
             <localizacao> Coastal East Africa</localizacao>
         </localizacoes>
-        <photos/>
+        <photos><photo /></photos>
     </animal>
     <animal>
         <id>3</id>
@@ -256,7 +256,7 @@ xsi:schemaLocation="http://www.soontobeinvisible.org/animais schema.xsd">
         <localizacoes>
             <localizacao>Arctic</localizacao>
         </localizacoes>
-        <photos/>
+        <photos><photo /></photos>
     </animal>
     <animal>
         <id>9</id>
@@ -597,7 +597,7 @@ xsi:schemaLocation="http://www.soontobeinvisible.org/animais schema.xsd">
         <localizacoes>
             <localizacao>Forest Habitat</localizacao>
         </localizacoes>
-        <photos/>
+        <photos><photo /></photos>
     </animal>
     <animal>
         <id>22</id>
@@ -1359,7 +1359,7 @@ xsi:schemaLocation="http://www.soontobeinvisible.org/animais schema.xsd">
             <localizacao>Amazon</localizacao>
             <localizacao> Pantanal</localizacao>
         </localizacoes>
-        <photos/>
+        <photos><photo /></photos>
     </animal>
     <animal>
         <id>50</id>
@@ -1485,7 +1485,7 @@ xsi:schemaLocation="http://www.soontobeinvisible.org/animais schema.xsd">
         <localizacoes>
             <localizacao>Arctic</localizacao>
         </localizacoes>
-        <photos/>
+        <photos><photo /></photos>
     </animal>
     <animal>
         <id>55</id>
@@ -2028,7 +2028,7 @@ h</sobre>
             <localizacao> Gulf of California</localizacao>
             <localizacao> Coastal East Africa</localizacao>
         </localizacoes>
-        <photos/>
+        <photos><photo /></photos>
     </animal>
     <animal>
         <id>73</id>
@@ -2164,7 +2164,7 @@ h</sobre>
         <localizacoes>
             <localizacao>Unknown</localizacao>
         </localizacoes>
-        <photos/>
+        <photos><photo /></photos>
     </animal>
     <animal>
         <id>78</id>
@@ -2325,7 +2325,7 @@ h</sobre>
         <localizacoes>
             <localizacao>Northern Great Plains</localizacao>
         </localizacoes>
-        <photos/>
+        <photos><photo /></photos>
     </animal>
     <animal>
         <id>84</id>
