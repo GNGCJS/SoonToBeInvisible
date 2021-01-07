@@ -77,4 +77,42 @@ app.post("/animais", (req, res) => {
     });
 });
 
+app.post("/galeria", (req, res) => {
+    let xml_string = fs.readFileSync(path.join(__dirname, "data.xml"), "utf-8");
+
+    res.render("galeria_header", (err, html, str) => {
+        res.write(html);
+    });
+
+    parser.parseString(xml_string, (err, data) => {
+        data["animais"]["animal"].forEach(animal => {
+            
+            if(parseInt(String(animal["photos"][0]["photo"][0]).length) !== 0){
+                animal["photos"][0]["photo"].forEach(foto => {
+                    res.write("<div class='caixa'>");
+                    res.write(`<p>${String(animal["comum"])}</p>`);
+                    res.write(`<img src="${String(foto)}" alt="${String(animal["comum"]).replace("'","").replace(" ", "")}" />`);
+                    res.write("</div>");
+                });
+            }
+            else{
+                res.write("<div class='caixa'>");
+                res.write(`<p>${String(animal["comum"])}</p>`);
+                res.write(`<img src="${'assets/images/placeholder.png'}" alt="${String(animal["comum"]).replace("'","").replace(" ", "")}" />`);   
+                res.write("</div>");
+                //console.log(String(animal["id"]));    
+            }
+        });
+    });
+
+    res.render("galeria_footer", (err, html, str) => {
+        res.write(html);
+    });
+
+    res.end(() => {
+        console.log("Page rendered");
+    })
+
+});
+
 app.listen(port, console.log(`Server listening in port ${port}`));
