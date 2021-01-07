@@ -83,10 +83,16 @@
     -webkit-transform: translateX(-50%) translateY(-50%);
 }
 
-.index .content .options li .bt, .index .content .options li .bt:visited{
+.index .content .options li .bt, .index .content .options li .bt:visited, .index .content .options li .btt{
     text-decoration: none;
     color: #FFFFFF;
     font-size: 25px;
+}
+
+.index .content .options li .btt, .index .content .options li .btt:focus{
+    background-color: rgba(0,0,0,0);
+    border: none;
+    outline: none;
 }
 
 .index .content .options li{
@@ -126,8 +132,9 @@
     transform: scale(2);
     transition: .5s;
 }
-.index .content .options li:hover a{
+.index .content .options li:hover a, .index .content .options li:hover .btt{
     color: #031A2B !important;
+    cursor: pointer;
 }
 /*fim botoes menu*/
 
@@ -589,7 +596,7 @@ background:rgba(0, 54, 84, 70)
     height: auto;
 }
 
-.animais .container .carta .footer .sobre{
+.animais .container .carta .footer .sobrebt{
     width: 100%;
     text-align: center;
     height: 100%;
@@ -603,7 +610,7 @@ background:rgba(0, 54, 84, 70)
     /* border: 2px solid blue; */
 }
 
-.animais .container .carta .footer .sobre:hover{
+.animais .container .carta .footer .sobrebt:hover{
     background-color: #FFFFFF;
     color: #ABA7BE;
     cursor: pointer;
@@ -613,7 +620,7 @@ background:rgba(0, 54, 84, 70)
     transition: .5s;
 }
 
-.animais .container .carta .footer .sobre:focus{
+.animais .container .carta .footer .sobrebt:focus{
     outline: none;
 }
 

@@ -15,7 +15,7 @@ const error_file = path.join(ws, "error.html");
 app.get("/:page", (req, res) =>{
     let user_req = req.originalUrl;
     let size = user_req.length;
-    let names = [];
+
     if (size > 5)
         if (user_req.substr(size - 5, size) !== ".html")
             user_req += ".html";
@@ -49,15 +49,16 @@ app.post("/animais", (req, res) => {
                 res.write(`<label class='nome_animal'>${String(animal["comum"])}</label>`);
                 res.write("</div>");
                 res.write("<div class='body'>");
-                try {
+                if(parseInt(String(animal["photos"][0]["photo"][0]).length) !== 0) {
                     res.write(`<img class="imagem_animal" src="${String(animal["photos"][0]["photo"][0])}" alt="${String(animal["comum"]).replace("'","").replace(" ", "")}" />`);
-                } catch (error) {
+                } 
+                else {
                     res.write(`<img class="imagem_animal" src="${'assets/images/placeholder.png'}" alt="${String(animal["comum"]).replace("'","").replace(" ", "")}" />`);
                     console.log(String(animal["id"]));    
                 }
                 res.write("</div>");
                 res.write("<div class='footer'>");
-                res.write("<button class='sobre'>");
+                res.write("<button class='sobrebt'>");
                 res.write("Sobre");
                 res.write("</button>");
                 res.write("</div>");
