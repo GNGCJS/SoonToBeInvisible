@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,59 +9,83 @@
     <meta name="keywords" content="Animais, Perigo, Animais em vias de extinçaõ">
     <title>Soon to be Invisible - Detalhes animal</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 </head>
+
 <body class="detalhes">
-    <div class="navbar">
+    <nav class="navbar">
         <div class="content">
             <a href="index.html" class="fundo texto">Menu</a><!--
-            --><a href="animais.html" class="fundo nav_active texto">Animais</a><!--
-            --><a href="galeria.html" class="fundo texto">Galeria</a><!--
+            --><form action="animais" method="POST">
+                <button class="nav_bt nav_active texto" type="submit">Animais</button>
+            </form><!--
+            --><form action="galeria" method="POST">
+                <button class="nav_bt texto" type="submit">Galeria</button>
+            </form><!--
             --><a href="contacto.html" class="fundo texto">Contacto</a><!--
             --><a href="sobre.html" class="fundo texto">Sobre</a>
         </div>
-    </div>
+    </nav>
     <div class="rect">
-       <div class="rect_dir">
-           <h2 Class="text_detalhes"> Coelho da Amazonia</h2><br>
-           <h3 class="text_detalhes2"> não faço ideia </h3><br>
-           <p> AHFIUHSDGFAHFUIGHAFIGHAIUFHGAIUFHGAIFHGAOFHGAUIFHGAUIFHGUISAdsfssssssssssssssssssssssssssssssssssssssssyuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu</p>
-       </div>
-       <div class="rect_meio">
+        <div class="rect_dir">
+            <h2 Class="text_detalhes"> Coelho da Amazonia</h2><br>
+            <h3 class="text_detalhes2"> não faço ideia </h3><br>
+            <p> AHFIUHSDGFAHFUIGHAFIGHAIUFHGAIUFHGAIFHGAOFHGAUIFHGAUIFHGUISAdsfssssssssssssssssssssssssssssssssssssssssyuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+            </p>
+        </div>
+        <div class="rect_meio">
             <h2 Class="text_detalhes">Detalhes</h2>
             <table class="tabela_detalhes">
-                <tr> 
+                <tr>
                     <td class="td1">Estado:</td>
                     <td class="td2"> n sei amifo</td>
                 </tr>
-                <tr> 
+                <tr>
                     <td class="td1">População: </td>
                     <td class="td2">qqqqqq</td>
                 </tr>
-                <tr> 
+                <tr>
                     <td class="td1">Peso: </td>
                     <td class="td2">wwwwwww</td>
                 </tr>
-                <tr> 
+                <tr>
                     <td class="td1">Tamanho: </td>
                     <td class="td2">eeeeee</td>
                 </tr>
-                <tr> 
+                <tr>
                     <td class="td1">Localizações: </td>
                     <td class="td2">rrrr</td>
                 </tr>
-                <tr> 
+                <tr>
                     <td class="td1">Habitats: </td>
                     <td class="td2">yyyyy</td>
                 </tr>
-                <tr> 
+                <tr>
                     <td class="td1">Altura: </td>
                     <td class="td2">iiii</td>
                 </tr>
             </table>
-       </div>
-       <div class="rect_esq">
+        </div>
+        <div class="rect_esq">
+            <div class="img_show">
+                <div class="seta_esquerda" id="seta_left">
+                    <img class="seta" src="assets/images/seta.png" alt="seta" />
+                </div>
+                <div class="seta_direita" id="seta_right">
+                    <img class="seta" src="assets/images/seta.png" alt="seta" />
+                </div>
+                <span class="helper"></span>
+                <img class="detalhes_img" src="assets/images/placeholder.png" alt="teste" />
+                <img class="detalhes_img hidden" src="assets/images/placeholder2.png" alt="teste" />
+                <img class="detalhes_img hidden" src="assets/images/placeholder3.png" alt="teste" />
+                <img class="detalhes_img hidden" src="assets/images/placeholder4.png" alt="teste" />
+                <img class="detalhes_img hidden" src="assets/images/placeholder5.png" alt="teste" />
+                <img class="detalhes_img hidden" src="assets/images/placeholder6.png" alt="teste" />
+                <img class="detalhes_img hidden" src="assets/images/placeholder7.png" alt="teste" />
+                <img class="detalhes_img hidden" src="assets/images/placeholder8.png" alt="teste" />
+            </div>
+        </div>
 
-       </div>
     </div>
 
     <div class="navbar_mobile">
@@ -75,12 +100,13 @@
         </a><!--
         --><a href="contacto.html" class="fundo texto">
             <img class="icon" src="assets/icons/contacto_w.png" alt="icon contacto" />
-        </a><!--SS
+        </a><!--
         --><a href="sobre.html" class="fundo   texto">
             <img class="icon" src="assets/icons/sobre_w.png" alt="icon sobre" />
         </a>
     </div>
 
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
