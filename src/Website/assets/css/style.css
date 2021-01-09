@@ -580,7 +580,7 @@
     height: 55%;
     float: left;
     margin: auto;
-    word-break: break-all;
+    word-break:break-all;
     border:2px solid black;
     padding-left: 2px;
     padding-right: 2px;
@@ -686,14 +686,15 @@
 }
 
 .detalhes .tabela_detalhes{
-    float: left;
+    margin-left: auto;
+    margin-right: auto;
     text-align: right;;
     margin-top: 5%;
-    margin-top: 30px;
+    margin-top: 160px;
 }
 
 .detalhes .tabela_detalhes .td1{
-    padding: 10px 0px;
+    padding: 15px 0px;
     padding-right: 5px ;
 }
 
@@ -701,6 +702,11 @@
     padding: 10px 0px;
     padding-right: 5px ;
     text-align: left;
+}
+
+.detalhes .tabela_detalhes .thead1{
+    text-align: center;
+    vertical-align: inherit;
 }
 
 .detalhes ::-webkit-scrollbar {
