@@ -507,6 +507,7 @@
 
 .animais .container .carta .header .nome_animal{
     font-size: calc(10px + 1.2vw);
+    text-transform: capitalize;
 }
 
 .animais .container .carta .body{
@@ -550,6 +551,14 @@
 .animais .container .carta .footer .sobrebt:focus{
     outline: none;
 }
+
+.animais .container .carta .footer .animal_id{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
 /*fim conteudo pagina animais*/
 
 /*conteudo pagina detalhes*/
@@ -567,7 +576,7 @@
     opacity: 0.80;
     border-radius: 30px;
     overflow:auto;
-    border:2px solid red;
+    /* border:2px solid red; */
     min-width: 260px;
 }
 
@@ -581,7 +590,7 @@
     float: left;
     margin: auto;
     word-break:break-all;
-    border:2px solid black;
+    /* border:2px solid black; */
     padding-left: 2px;
     padding-right: 2px;
 }
@@ -595,7 +604,7 @@
     height: 97%;
     margin: auto;
     word-wrap: wrap break-word;
-    border:2px solid green;
+    /* border:2px solid green; */
     
 }
 
@@ -603,13 +612,13 @@
     width: 70%;
     height: 42%;
     float: left;
-    border:2px solid yellow;
+    /* border:2px solid yellow; */
     overflow: hidden;
 }
 
 .detalhes .rect .rect_esq .img_show{
     position: relative;
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     width: 65%;
     height: 100%;
     display: block;
@@ -619,7 +628,7 @@
 
 .detalhes .rect .rect_esq .img_show .seta_esquerda .seta, .detalhes .rect .rect_esq .img_show .seta_direita .seta{
     position: absolute;
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     width: 50px;
     height: auto;
     top: 50%;
@@ -951,6 +960,24 @@
     width: 60%;
     height: 75px;
     font-size:x-large;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+.contacto .botao:hover{
+    background-color: #FFFFFF;
+    color: rgba(166, 185, 199);
+    cursor: pointer;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+.contacto .botao:focus{
+    outline: none;
 }
 
 .contacto .socials {
@@ -1066,7 +1093,7 @@
         transition: .5s;
     }
 
-    .navbar_mobile a{
+    .navbar_mobile a, .navbar_mobile form{
         display: inline-block;
         border: 2px solid #FFFFFF;
         border-bottom: none;
@@ -1074,6 +1101,18 @@
         min-width: 50px;
         height: 20%;
         max-height: 20% !important;
+    }
+
+    .navbar_mobile form{
+        border: 3px solid #FFFFFF;
+        border-bottom: none;        
+    }
+    
+    .navbar_mobile button, .navbar_mobile button:focus .navbar_mobile button:hover{
+        border: none;
+        width: 100%;
+        outline: none;
+        cursor: pointer;
     }
 
     .navbar_mobile .icon{
