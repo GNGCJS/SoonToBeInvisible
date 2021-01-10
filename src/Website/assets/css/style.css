@@ -667,20 +667,21 @@
     display: inline-block;
     height: 100%;
     vertical-align: middle;
+    /* border: 2px solid red; */
 }
 
 .detalhes .rect .rect_esq .img_show .hidden{
     position: absolute;
     right: -1550px;
     vertical-align: middle;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .detalhes .rect .rect_esq .img_show .hiddenR{
     position: absolute;
     left: -1550px;
     vertical-align: middle;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .detalhes .text_detalhes{
@@ -756,11 +757,11 @@
     transition: .5s;
 }
 
-.galeria .caixa p, .galeria .caixa img{
+.galeria .caixa img, .galeria .caixa figcaption{
     float: left;
 }
 
-.galeria .caixa p{
+.galeria .caixa figcaption{
     font-size: larger;
     font-weight: 600;
 }
