@@ -6,33 +6,35 @@ const fs = require("fs");
 const ws = __dirname + "\\..\\..";
 const xml2js = require('xml2js');
 const parser = new xml2js.Parser({ attrkey: "ATTR" });
+const bodyParser = require("body-parser");
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "\\..\\.."));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 const error_file = path.join(ws, "error.html");
 
-// app.get("/:page", (req, res) =>{
-//     let user_req = req.originalUrl;
-//     let size = user_req.length;
+app.get("/:page", (req, res) =>{
+    let user_req = req.originalUrl;
+    let size = user_req.length;
 
-//     if (size > 5)
-//         if (user_req.substr(size - 5, size) !== ".html")
-//             user_req += ".html";
-//     else
-//         user_req += ".html";
+    if (size > 5)
+        if (user_req.substr(size - 5, size) !== ".html")
+            user_req += ".html";
+    else
+        user_req += ".html";
 
-//     fs.access(path.join(ws, user_req), (err) => {
-//         if (!err){
-//             res.statusCode = 200;
-//             res.sendFile(path.join(ws, user_req));
-//         }
-//         else{
-//             res.statusCode = 404;
-//             res.sendFile(error_file);
-//         }
-//     });
-// });
+    fs.access(path.join(ws, user_req), (err) => {
+        if (!err){
+            res.statusCode = 200;
+            res.sendFile(path.join(ws, user_req));
+        }
+        else{
+            res.statusCode = 404;
+            res.sendFile(error_file);
+        }
+    });
+});
 
 app.post("/animais", (req, res) => {
     let xml_string = fs.readFileSync(path.join(__dirname, "data.xml"), "utf-8");
@@ -58,9 +60,12 @@ app.post("/animais", (req, res) => {
                 }
                 res.write("</div>");
                 res.write("<div class='footer'>");
-                res.write("<button class='sobrebt'>");
+                res.write("<form action='detalhes' method='POST'>")
+                res.write(`<input name='a_id' class="animal_id" type='text' readonly value='${animal["id"]}' />`);
+                res.write("<button class='sobrebt' type='submit'>");
                 res.write("Sobre");
                 res.write("</button>");
+                res.write("</form>")
                 res.write("</div>");
                 res.write("</div>");
             });
@@ -73,6 +78,8 @@ app.post("/animais", (req, res) => {
         res.write(html);
     });
 
+    res.statusCode = 200;
+    
     res.end(() => {
         console.log("Page rendered!");
     });
@@ -110,13 +117,18 @@ app.post("/galeria", (req, res) => {
         res.write(html);
     });
 
+    res.statusCode = 200;
+
     res.end(() => {
         console.log("Page rendered");
     })
 
 });
 
-app.get("/detalhes", (req, res) => {
+app.post("/detalhes", (req, res) => {
+    const { a_id } = req.body;
+    console.log(String(a_id));
+
     let xml_string = fs.readFileSync(path.join(__dirname, "data.xml"), "utf-8");
 
     res.render("detalhes_header", (err, html, str) => {
@@ -125,7 +137,7 @@ app.get("/detalhes", (req, res) => {
 
     parser.parseString(xml_string, (err, data) => {
         data["animais"]["animal"].forEach(animal => {
-            if(String(animal["id"]) === "0"){
+            if(String(animal["id"]) === String(a_id)){
                 //res.write(`<h2 Class='text_detalhes'>${String(animal["comum"])}</h2><br>`);
                 res.write("<article class='rect_dir'>");
                 res.write(`<h2 Class='text_detalhes'>${String(animal["comum"])}</h2><br>`);
@@ -186,10 +198,11 @@ app.get("/detalhes", (req, res) => {
                 res.write("<div class='seta_direita' id='seta_right'>");
                 res.write("<img class='seta' src='assets/images/seta.png' alt='seta' />");
                 res.write("</div>");
+                // res.write("<figure>");
                 res.write("<span class='helper'></span>");
-
                 res.write(`<img class='detalhes_img' src="${String(animal["photos"][0]["photo"].shift())}" alt='${String(animal["comum"]).replace(" ", "").replace("'", "")}' />`);
-                
+                // res.write(`<figcaption>${String(animal["comum"])}</figcaption>`);
+                // res.write("</figure>");
                 animal["photos"][0]["photo"].forEach(foto => {
                     res.write(`<img class='detalhes_img hidden' src="${String(foto)}" alt='${String(animal["comum"]).replace(" ", "").replace("'", "")}' />`);
                 });
@@ -202,6 +215,8 @@ app.get("/detalhes", (req, res) => {
     res.render("detalhes_footer", (err, html, str) => {
         res.write(html);
     });
+
+    res.statusCode = 200;
 
     res.end(() => {
         console.log("Page rendered");
