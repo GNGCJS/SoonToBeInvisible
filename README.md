@@ -30,6 +30,10 @@ O nosso projeto tem como objetivo apresentar os animais em via de extinção per
 
 - NodeJS
 - Express
+- Jquery
+- Xml2Js
+- Ejs
+- Body-Parser
 
 # Relatório
 
