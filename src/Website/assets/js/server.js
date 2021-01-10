@@ -98,15 +98,21 @@ app.post("/galeria", (req, res) => {
             if(parseInt(String(animal["photos"][0]["photo"][0]).length) !== 0){
                 animal["photos"][0]["photo"].forEach(foto => {
                     res.write("<div class='caixa'>");
-                    res.write(`<p>${String(animal["comum"])}</p>`);
+                    res.write("<figure>")
+                    res.write(`<figcaption>${String(animal["comum"])}</figcaption>`);
+                    res.write(`<a href="${String(foto)}" target="blank">`)
                     res.write(`<img src="${String(foto)}" alt="${String(animal["comum"]).replace("'","").replace(" ", "")}" />`);
+                    res.write("</a>");
+                    res.write("</figure>")
                     res.write("</div>");
                 });
             }
             else{
                 res.write("<div class='caixa'>");
-                res.write(`<p>${String(animal["comum"])}</p>`);
+                res.write("<figure>")
+                res.write(`<figcaption>${String(animal["comum"])}</figcaption>`);
                 res.write(`<img src="${'assets/images/placeholder.png'}" alt="${String(animal["comum"]).replace("'","").replace(" ", "")}" />`);   
+                res.write("</figure>")
                 res.write("</div>");
                 //console.log(String(animal["id"]));    
             }
@@ -198,11 +204,8 @@ app.post("/detalhes", (req, res) => {
                 res.write("<div class='seta_direita' id='seta_right'>");
                 res.write("<img class='seta' src='assets/images/seta.png' alt='seta' />");
                 res.write("</div>");
-                // res.write("<figure>");
                 res.write("<span class='helper'></span>");
-                res.write(`<img class='detalhes_img' src="${String(animal["photos"][0]["photo"].shift())}" alt='${String(animal["comum"]).replace(" ", "").replace("'", "")}' />`);
-                // res.write(`<figcaption>${String(animal["comum"])}</figcaption>`);
-                // res.write("</figure>");
+                res.write(`<img class='detalhes_img' src="${String(animal["photos"][0]["photo"].shift())}" alt='${String(animal["comum"]).replace(" ", "").replace("'", "")}' />`);                
                 animal["photos"][0]["photo"].forEach(foto => {
                     res.write(`<img class='detalhes_img hidden' src="${String(foto)}" alt='${String(animal["comum"]).replace(" ", "").replace("'", "")}' />`);
                 });
