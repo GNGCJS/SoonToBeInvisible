@@ -510,6 +510,11 @@
     text-transform: capitalize;
 }
 
+.animais .container .carta .header .nome_animal mark{
+    background-color: rgb(113,101,167);
+    color: #FFFFFF;
+}
+
 .animais .container .carta .body{
     height: 100%;
     background-color: rgba(171, 167, 190, 0.7);
