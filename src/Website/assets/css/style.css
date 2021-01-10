@@ -882,6 +882,10 @@
     word-wrap: wrap break-word;
 }
 
+.sobre .rect_text address dl dd{
+ padding-left: 30px;
+}
+
 .sobre .ull {
     margin-left: 50px;
 }
