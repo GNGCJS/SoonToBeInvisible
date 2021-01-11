@@ -6,6 +6,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 /*navbar igual para todas as páginas*/
@@ -787,8 +788,9 @@
     position: fixed;
     cursor: pointer;
     border-radius: 4px;
-    bottom: 50px;
+    bottom: 100px;
     right: 5%;
+    transform: rotate(180deg);
 }
 
 .galeria .left-bar {
@@ -812,7 +814,6 @@
     display: block;
     float: right;
     border-radius: 6px 10px 10px 6px;
-    transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
     z-index: -1;
 }
 
@@ -837,18 +838,13 @@
     display: block;
     float: right;
     border-radius: 10px 6px 6px 10px;
-    transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
     z-index: -1;
 }
 
-.galeria .open .left-bar:after {
-    transform-origin: center center;
-    transform: rotate(-70deg);
-}
-
-.galeria .open .right-bar:after {
-    transform-origin: center center;
-    transform: rotate(70deg);
+.galeria .linkTop {
+    position: absolute;
+    top:0;
+    left:0;
 }
 /*fim conteudo pagina galeria*/
 
@@ -992,7 +988,6 @@
 
 .contacto .socials {
     background-color: rgba(166, 185, 199, 0.9);
-    width: 100%;
     height: 350px;
     display: flex;
     align-items: center;
@@ -1004,7 +999,6 @@
     margin: 0;
     padding: 0;
     display: flex;
-    width: 100%;
   }
   
   .contacto .li_socials {
@@ -1073,8 +1067,11 @@
   }
 /*fim conteudo pagina contacto*/
 
-
-
+@media only screen and (max-width: 1400px) {
+    .contacto .socials ul {
+        width: 100%;
+    }
+}
 
 /*media querys*/
 @media only screen and (max-width: 1024px) {
@@ -1187,7 +1184,7 @@
     }
 
     .galeria .arrow-icon{
-        right: 10%;
+        right: 2.5%;
     }
     /*fim conteudo pagina galeria*/
 
@@ -1359,7 +1356,7 @@
     }
     
     .galeria .arrow-icon{
-        right: 10%;
+        right: 5%;
     }
     /*fim galeria*/
 }
