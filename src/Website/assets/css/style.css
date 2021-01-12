@@ -893,7 +893,17 @@
     right: 0;
     margin: auto;
     word-wrap: break-word;
+    
 }
+.sobre .rect .rect_text .li_sobre{
+    text-decoration: none;
+    list-style-type: none;
+    padding-left: 50px;
+}
+.sobre .rect .rect_text .li_sobre2{
+    list-style-type: none;
+}
+
 
 .sobre .rect_text address dl dd{
  padding-left: 30px;
@@ -901,6 +911,7 @@
 
 .sobre .ull {
     margin-left: 50px;
+    list-style-type: none;
 }
 
 .sobre ::-webkit-scrollbar {
