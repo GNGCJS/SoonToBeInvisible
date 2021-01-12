@@ -592,7 +592,7 @@
     text-align: center;
     font-size: 18px;
     width: 70%;
-    height: 55%;
+    height: 50%;
     float: left;
     margin: auto;
     word-break:break-all;
@@ -609,7 +609,7 @@
     width: 30%;
     height: 97%;
     margin: auto;
-    word-wrap: wrap break-word;
+    word-wrap: break-word;
     /* border:2px solid green; */
     
 }
@@ -690,9 +690,17 @@
     /* border: 1px solid red; */
 }
 
-.detalhes .text_detalhes{
+.detalhes .rect .text_detalhes{
     text-align: center;
     padding-top: 35px;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.detalhes .rect .rect_meio .text_detalhes, .detalhes .rect .rect_meio .text_detalhes3{
+    text-align: center;
+    padding-top: 35px;
+    border: none;
 }
 
 .detalhes .text_detalhes2{
@@ -705,8 +713,7 @@
     margin-left: auto;
     margin-right: auto;
     text-align: right;;
-    margin-top: 5%;
-    margin-top: 160px;
+    margin-top: 120px;
 }
 
 .detalhes .tabela_detalhes .td1{
@@ -841,7 +848,7 @@
     z-index: -1;
 }
 
-.galeria .linkTop {
+.galeria #top {
     position: absolute;
     top:0;
     left:0;
@@ -875,7 +882,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    word-wrap: wrap break-word;
+    word-wrap: break-word;
 }
 
 .sobre .rect_text address dl dd{
