@@ -13,6 +13,7 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "\\..\\.."));
 app.use(bodyParser.urlencoded({ extended: false }));
 
+
 app.get("/:page", (req, res) =>{
     let user_req = req.originalUrl;
     let size = user_req.length;
