@@ -7,12 +7,11 @@ const ws = __dirname + "\\..\\..";
 const xml2js = require('xml2js');
 const parser = new xml2js.Parser({ attrkey: "ATTR" });
 const bodyParser = require("body-parser");
+const error_file = path.join(ws, "error.html");
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "\\..\\.."));
 app.use(bodyParser.urlencoded({ extended: false }));
-
-const error_file = path.join(ws, "error.html");
 
 app.get("/:page", (req, res) =>{
     let user_req = req.originalUrl;
@@ -113,8 +112,7 @@ app.post("/galeria", (req, res) => {
                 res.write(`<figcaption>${String(animal["comum"])}</figcaption>`);
                 res.write(`<img src="${'assets/images/placeholder.png'}" alt="${String(animal["comum"]).replace("'","").replace(" ", "")}" />`);   
                 res.write("</figure>")
-                res.write("</div>");
-                //console.log(String(animal["id"]));    
+                res.write("</div>");  
             }
         });
     });
@@ -133,7 +131,6 @@ app.post("/galeria", (req, res) => {
 
 app.post("/detalhes", (req, res) => {
     const { a_id } = req.body;
-    console.log(String(a_id));
 
     let xml_string = fs.readFileSync(path.join(__dirname, "data.xml"), "utf-8");
 
@@ -144,14 +141,13 @@ app.post("/detalhes", (req, res) => {
     parser.parseString(xml_string, (err, data) => {
         data["animais"]["animal"].forEach(animal => {
             if(String(animal["id"]) === String(a_id)){
-                //res.write(`<h2 Class='text_detalhes'>${String(animal["comum"])}</h2><br>`);
-                res.write("<article class='rect_dir'>");
                 res.write(`<h2 Class='text_detalhes'>${String(animal["comum"])}</h2><br>`);
+                res.write("<article class='rect_dir'>");
                 res.write(`<h3 class='text_detalhes2'>${String(animal["cientifico"])}</h3><br>`);
                 res.write(`<p>${animal["sobre"]}</p>`);
                 res.write("</article>");
                 res.write("<div class='rect_meio'>");
-                res.write("<h2 Class='text_detalhes'>Detalhes</h2>");                
+                res.write("<h2 Class='text_detalhes3'>Detalhes</h2>");                
                 res.write("<table class='tabela_detalhes'>");
                 res.write("<thead>");
                 res.write("<tr>");  
@@ -222,7 +218,7 @@ app.post("/detalhes", (req, res) => {
     res.statusCode = 200;
 
     res.end(() => {
-        console.log("Page rendered");
+        console.log("Page details rendered");
     })
 });
 
