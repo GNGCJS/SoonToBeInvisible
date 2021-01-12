@@ -353,6 +353,16 @@
     background-size: cover;
 }
 
+.erro{
+    background-image: url("../images/fundo erro.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 /*fim fundo da página*/
 
 /*conteudo pagina index*/
@@ -1074,6 +1084,41 @@
   }
 /*fim conteudo pagina contacto*/
 
+/*conteudo pagina erro*/
+.erro .center{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    background-color: #224a6850;
+}
+
+.erro .center h1{
+    font-size: calc(25px + 2vw);
+    padding: 10px;
+}
+
+.erro .center a{
+    font-size: calc(25px + 1vw);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.erro .center a:visited{
+    color: #ffffff;
+}
+
+.erro .center a:hover{
+    color: rgb(0, 255, 213);
+}
+
+
+/*fim conteudo pagina erro*/
+
 @media only screen and (max-width: 1400px) {
     .contacto .socials ul {
         width: 100%;
@@ -1305,8 +1350,6 @@
 
      /*fim conteudo pagina detalhes*/
 }
-
-
 
 /*media querys para a pagina animal*/
 @media only screen and (max-width: 1350px){
