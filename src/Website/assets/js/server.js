@@ -55,7 +55,7 @@ app.post("/animais", (req, res) => {
                     res.write(`<img class="imagem_animal" src="${String(animal["photos"][0]["photo"][0])}" alt="${String(animal["comum"]).replace("'","").replace(" ", "")}" />`);
                 } 
                 else {
-                    res.write(`<img class="imagem_animal" src="${'assets/images/placeholder.png'}" alt="${String(animal["comum"]).replace("'","").replace(" ", "")}" />`);
+                    res.write(`<img class="imagem_animal" src="assets/images/placeholder.png" alt="${String(animal["comum"]).replace("'","").replace(" ", "")}" />`);
                     console.log(String(animal["id"]));    
                 }
                 res.write("</div>");
@@ -111,7 +111,7 @@ app.post("/galeria", (req, res) => {
                 res.write("<div class='caixa'>");
                 res.write("<figure>")
                 res.write(`<figcaption lang='en'>${String(animal["comum"])}</figcaption>`);
-                res.write(`<img src="${'assets/images/placeholder.png'}" alt="${String(animal["comum"]).replace("'","").replace(" ", "")}" />`);   
+                res.write(`<img src="assets/images/placeholder.png" alt="${String(animal["comum"]).replace("'","").replace(" ", "")}" />`);   
                 res.write("</figure>")
                 res.write("</div>");  
             }
@@ -125,7 +125,7 @@ app.post("/galeria", (req, res) => {
     res.statusCode = 200;
 
     res.end(() => {
-        console.log("Page rendered");
+        console.log("Page galery rendered");
     })
 
 });
@@ -144,7 +144,9 @@ app.post("/detalhes", (req, res) => {
             if(String(animal["id"]) === String(a_id)){
                 res.write(`<h2 lang='en' class='text_detalhes'>${String(animal["comum"])}</h2><br>`);
                 res.write("<article class='rect_dir'>");
+                res.write("<header>");
                 res.write(`<h3 lang='la' class='text_detalhes2'>${String(animal["cientifico"])}</h3><br>`);
+                res.write("</header>");
                 res.write(`<p lang='en'>${animal["sobre"]}</p>`);
                 res.write("</article>");
                 res.write("<div class='rect_meio'>");
@@ -202,10 +204,15 @@ app.post("/detalhes", (req, res) => {
                 res.write("<img class='seta' src='assets/images/seta.png' alt='seta' />");
                 res.write("</div>");
                 res.write("<span class='helper'></span>");
-                res.write(`<img class='detalhes_img' src="${String(animal["photos"][0]["photo"].shift())}" alt='${String(animal["comum"]).replace(" ", "").replace("'", "")}' />`);                
-                animal["photos"][0]["photo"].forEach(foto => {
-                    res.write(`<img class='detalhes_img hidden' src="${String(foto)}" alt='${String(animal["comum"]).replace(" ", "").replace("'", "")}' />`);
-                });
+                if(String(animal["photos"][0]["photo"][0]) !== ""){
+                    res.write(`<img class='detalhes_img' src="${String(animal["photos"][0]["photo"].shift())}" alt='${String(animal["comum"]).replace(" ", "").replace("'", "")}' />`);                
+                    animal["photos"][0]["photo"].forEach(foto => {
+                        res.write(`<img class='detalhes_img hidden' src="${String(foto)}" alt='${String(animal["comum"]).replace(" ", "").replace("'", "")}' />`);
+                    });
+                }
+                else{
+                    res.write(`<img class='detalhes_img' src="assets/images/placeholder.png" alt='${String(animal["comum"]).replace(" ", "").replace("'", "")}' />`);
+                }
                 res.write("</div>");
                 res.write("</div>");
             }
