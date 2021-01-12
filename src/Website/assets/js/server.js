@@ -189,8 +189,10 @@ app.post("/detalhes", (req, res) => {
                 res.write("</tbody>");
                 res.write("<tfoot>");
                 res.write("<tr>");
-                res.write("<td colspan='2' class='thead1'>Fonte: <a href='https://www.worldwildlife.org/' target='blank'> WWF</a></td>");
+                res.write("<td rowspan='2' class='thead1'>Fonte: <a href='https://www.worldwildlife.org/' target='blank'> WWF</a></td>");
+                res.write("<td></td>");
                 res.write("</tr>");
+                res.write("<tr><td></td></tr>")
                 res.write("</tfoot>");
                 res.write("</table>");
                 res.write("</div>");
