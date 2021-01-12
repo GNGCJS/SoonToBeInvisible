@@ -6,6 +6,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 /*navbar igual para todas as páginas*/
@@ -352,6 +353,16 @@
     background-size: cover;
 }
 
+.erro{
+    background-image: url("../images/fundo erro.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 /*fim fundo da página*/
 
 /*conteudo pagina index*/
@@ -510,6 +521,11 @@
     text-transform: capitalize;
 }
 
+.animais .container .carta .header .nome_animal mark{
+    background-color: rgb(113,101,167);
+    color: #FFFFFF;
+}
+
 .animais .container .carta .body{
     height: 100%;
     background-color: rgba(171, 167, 190, 0.7);
@@ -586,7 +602,7 @@
     text-align: center;
     font-size: 18px;
     width: 70%;
-    height: 55%;
+    height: 50%;
     float: left;
     margin: auto;
     word-break:break-all;
@@ -603,7 +619,7 @@
     width: 30%;
     height: 97%;
     margin: auto;
-    word-wrap: wrap break-word;
+    word-wrap: break-word;
     /* border:2px solid green; */
     
 }
@@ -667,25 +683,34 @@
     display: inline-block;
     height: 100%;
     vertical-align: middle;
+    /* border: 2px solid red; */
 }
 
 .detalhes .rect .rect_esq .img_show .hidden{
     position: absolute;
     right: -1550px;
     vertical-align: middle;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .detalhes .rect .rect_esq .img_show .hiddenR{
     position: absolute;
     left: -1550px;
     vertical-align: middle;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
-.detalhes .text_detalhes{
+.detalhes .rect .text_detalhes{
     text-align: center;
     padding-top: 35px;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.detalhes .rect .rect_meio .text_detalhes, .detalhes .rect .rect_meio .text_detalhes3{
+    text-align: center;
+    padding-top: 35px;
+    border: none;
 }
 
 .detalhes .text_detalhes2{
@@ -698,8 +723,7 @@
     margin-left: auto;
     margin-right: auto;
     text-align: right;;
-    margin-top: 5%;
-    margin-top: 160px;
+    margin-top: 120px;
 }
 
 .detalhes .tabela_detalhes .td1{
@@ -756,11 +780,11 @@
     transition: .5s;
 }
 
-.galeria .caixa p, .galeria .caixa img{
+.galeria .caixa img, .galeria .caixa figcaption{
     float: left;
 }
 
-.galeria .caixa p{
+.galeria .caixa figcaption{
     font-size: larger;
     font-weight: 600;
 }
@@ -781,8 +805,9 @@
     position: fixed;
     cursor: pointer;
     border-radius: 4px;
-    bottom: 50px;
+    bottom: 100px;
     right: 5%;
+    transform: rotate(180deg);
 }
 
 .galeria .left-bar {
@@ -806,7 +831,6 @@
     display: block;
     float: right;
     border-radius: 6px 10px 10px 6px;
-    transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
     z-index: -1;
 }
 
@@ -831,18 +855,13 @@
     display: block;
     float: right;
     border-radius: 10px 6px 6px 10px;
-    transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
     z-index: -1;
 }
 
-.galeria .open .left-bar:after {
-    transform-origin: center center;
-    transform: rotate(-70deg);
-}
-
-.galeria .open .right-bar:after {
-    transform-origin: center center;
-    transform: rotate(70deg);
+.galeria #top {
+    position: absolute;
+    top:0;
+    left:0;
 }
 /*fim conteudo pagina galeria*/
 
@@ -873,7 +892,11 @@
     left: 0;
     right: 0;
     margin: auto;
-    word-wrap: wrap break-word;
+    word-wrap: break-word;
+}
+
+.sobre .rect_text address dl dd{
+ padding-left: 30px;
 }
 
 .sobre .ull {
@@ -982,7 +1005,6 @@
 
 .contacto .socials {
     background-color: rgba(166, 185, 199, 0.9);
-    width: 100%;
     height: 350px;
     display: flex;
     align-items: center;
@@ -994,7 +1016,6 @@
     margin: 0;
     padding: 0;
     display: flex;
-    width: 100%;
   }
   
   .contacto .li_socials {
@@ -1063,8 +1084,46 @@
   }
 /*fim conteudo pagina contacto*/
 
+/*conteudo pagina erro*/
+.erro .center{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    background-color: #224a6850;
+}
+
+.erro .center h1{
+    font-size: calc(25px + 2vw);
+    padding: 10px;
+}
+
+.erro .center a{
+    font-size: calc(25px + 1vw);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.erro .center a:visited{
+    color: #ffffff;
+}
+
+.erro .center a:hover{
+    color: rgb(0, 255, 213);
+}
 
 
+/*fim conteudo pagina erro*/
+
+@media only screen and (max-width: 1400px) {
+    .contacto .socials ul {
+        width: 100%;
+    }
+}
 
 /*media querys*/
 @media only screen and (max-width: 1024px) {
@@ -1177,7 +1236,7 @@
     }
 
     .galeria .arrow-icon{
-        right: 10%;
+        right: 2.5%;
     }
     /*fim conteudo pagina galeria*/
 
@@ -1292,8 +1351,6 @@
      /*fim conteudo pagina detalhes*/
 }
 
-
-
 /*media querys para a pagina animal*/
 @media only screen and (max-width: 1350px){
     .animais .container .carta{
@@ -1349,7 +1406,7 @@
     }
     
     .galeria .arrow-icon{
-        right: 10%;
+        right: 5%;
     }
     /*fim galeria*/
 }

@@ -7,12 +7,12 @@ const ws = __dirname + "\\..\\..";
 const xml2js = require('xml2js');
 const parser = new xml2js.Parser({ attrkey: "ATTR" });
 const bodyParser = require("body-parser");
+const error_file = path.join(ws, "error.html");
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "\\..\\.."));
 app.use(bodyParser.urlencoded({ extended: false }));
 
-const error_file = path.join(ws, "error.html");
 
 app.get("/:page", (req, res) =>{
     let user_req = req.originalUrl;
@@ -48,7 +48,7 @@ app.post("/animais", (req, res) => {
             data["animais"]["animal"].forEach(animal => {
                 res.write("<div class='carta'>");
                 res.write("<div class='header'>")
-                res.write(`<label class='nome_animal'>${String(animal["comum"])}</label>`);
+                res.write(`<label lang='en' class='nome_animal'>${String(animal["comum"])}</label>`);
                 res.write("</div>");
                 res.write("<div class='body'>");
                 if(parseInt(String(animal["photos"][0]["photo"][0]).length) !== 0) {
@@ -98,17 +98,22 @@ app.post("/galeria", (req, res) => {
             if(parseInt(String(animal["photos"][0]["photo"][0]).length) !== 0){
                 animal["photos"][0]["photo"].forEach(foto => {
                     res.write("<div class='caixa'>");
-                    res.write(`<p>${String(animal["comum"])}</p>`);
+                    res.write("<figure>")
+                    res.write(`<figcaption lang='en'>${String(animal["comum"])}</figcaption>`);
+                    res.write(`<a href="${String(foto)}" target="blank">`)
                     res.write(`<img src="${String(foto)}" alt="${String(animal["comum"]).replace("'","").replace(" ", "")}" />`);
+                    res.write("</a>");
+                    res.write("</figure>")
                     res.write("</div>");
                 });
             }
             else{
                 res.write("<div class='caixa'>");
-                res.write(`<p>${String(animal["comum"])}</p>`);
+                res.write("<figure>")
+                res.write(`<figcaption lang='en'>${String(animal["comum"])}</figcaption>`);
                 res.write(`<img src="${'assets/images/placeholder.png'}" alt="${String(animal["comum"]).replace("'","").replace(" ", "")}" />`);   
-                res.write("</div>");
-                //console.log(String(animal["id"]));    
+                res.write("</figure>")
+                res.write("</div>");  
             }
         });
     });
@@ -127,7 +132,6 @@ app.post("/galeria", (req, res) => {
 
 app.post("/detalhes", (req, res) => {
     const { a_id } = req.body;
-    console.log(String(a_id));
 
     let xml_string = fs.readFileSync(path.join(__dirname, "data.xml"), "utf-8");
 
@@ -138,14 +142,13 @@ app.post("/detalhes", (req, res) => {
     parser.parseString(xml_string, (err, data) => {
         data["animais"]["animal"].forEach(animal => {
             if(String(animal["id"]) === String(a_id)){
-                //res.write(`<h2 Class='text_detalhes'>${String(animal["comum"])}</h2><br>`);
+                res.write(`<h2 lang='en' class='text_detalhes'>${String(animal["comum"])}</h2><br>`);
                 res.write("<article class='rect_dir'>");
-                res.write(`<h2 Class='text_detalhes'>${String(animal["comum"])}</h2><br>`);
-                res.write(`<h3 class='text_detalhes2'>${String(animal["cientifico"])}</h3><br>`);
-                res.write(`<p>${animal["sobre"]}</p>`);
+                res.write(`<h3 lang='la' class='text_detalhes2'>${String(animal["cientifico"])}</h3><br>`);
+                res.write(`<p lang='en'>${animal["sobre"]}</p>`);
                 res.write("</article>");
                 res.write("<div class='rect_meio'>");
-                res.write("<h2 Class='text_detalhes'>Detalhes</h2>");                
+                res.write("<h2 Class='text_detalhes3'>Detalhes</h2>");                
                 res.write("<table class='tabela_detalhes'>");
                 res.write("<thead>");
                 res.write("<tr>");  
@@ -155,31 +158,31 @@ app.post("/detalhes", (req, res) => {
                 res.write("<tbody>");
                 res.write("<tr>");
                 res.write("<td class='td1'><strong>Estado:</strong></td>");
-                res.write(`<td class='td2'>${String(animal["estado"])}</td>`);
+                res.write(`<td lang='en' class='td2'>${String(animal["estado"])}</td>`);
                 res.write("</tr>");
                 res.write("<tr>");
                 res.write("<td class='td1'><strong>População:</strong> </td>");
-                res.write(`<td class='td2'>${String(animal["populacao"])}</td>`);
+                res.write(`<td lang='en' class='td2'>${String(animal["populacao"])}</td>`);
                 res.write("</tr>");
                 res.write("<tr>");
                 res.write("<td class='td1'><strong>Peso:</strong></td>");
-                res.write(`<td class='td2'>${String(animal["peso"])}</td>`);
+                res.write(`<td lang='en' class='td2'>${String(animal["peso"])}</td>`);
                 res.write("</tr>");
                 res.write("<tr>");
                 res.write("<td class='td1'><strong>Tamanho:</strong></td>");
-                res.write(`<td class='td2'>${String(animal["tamanho"])}</td>`);
+                res.write(`<td lang='en' class='td2'>${String(animal["tamanho"])}</td>`);
                 res.write("</tr>");
                 res.write("<tr>");
                 res.write("<td class='td1'><strong>Localizações:</strong></td>");
-                res.write(`<td class='td2'>${String(animal["localizacoes"][0]["localizacao"][0])}</td>`);
+                res.write(`<td lang='en' class='td2'>${String(animal["localizacoes"][0]["localizacao"][0])}</td>`);
                 res.write("</tr>");
                 res.write("<tr>");
                 res.write("<td class='td1'><strong>Habitats:</strong></td>");
-                res.write(`<td class='td2'>${String(animal["habitats"][0]["habitat"][0])}</td>`);
+                res.write(`<td lang='en' class='td2'>${String(animal["habitats"][0]["habitat"][0])}</td>`);
                 res.write("</tr>");
                 res.write("<tr>");
                 res.write("<td class='td1'><strong>Altura:</strong></td>");
-                res.write(`<td class='td2'>${String(animal["altura"])}</td>`);
+                res.write(`<td lang='en' class='td2'>${String(animal["altura"])}</td>`);
                 res.write("</tr>");
                 res.write("</tbody>");
                 res.write("<tfoot>");
@@ -198,11 +201,8 @@ app.post("/detalhes", (req, res) => {
                 res.write("<div class='seta_direita' id='seta_right'>");
                 res.write("<img class='seta' src='assets/images/seta.png' alt='seta' />");
                 res.write("</div>");
-                // res.write("<figure>");
                 res.write("<span class='helper'></span>");
-                res.write(`<img class='detalhes_img' src="${String(animal["photos"][0]["photo"].shift())}" alt='${String(animal["comum"]).replace(" ", "").replace("'", "")}' />`);
-                // res.write(`<figcaption>${String(animal["comum"])}</figcaption>`);
-                // res.write("</figure>");
+                res.write(`<img class='detalhes_img' src="${String(animal["photos"][0]["photo"].shift())}" alt='${String(animal["comum"]).replace(" ", "").replace("'", "")}' />`);                
                 animal["photos"][0]["photo"].forEach(foto => {
                     res.write(`<img class='detalhes_img hidden' src="${String(foto)}" alt='${String(animal["comum"]).replace(" ", "").replace("'", "")}' />`);
                 });
@@ -219,7 +219,7 @@ app.post("/detalhes", (req, res) => {
     res.statusCode = 200;
 
     res.end(() => {
-        console.log("Page rendered");
+        console.log("Page details rendered");
     })
 });
 
