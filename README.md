@@ -14,9 +14,26 @@ O nosso projeto tem como objetivo apresentar os animais em via de extinção per
 # Organização do repositório
 
 - O código fonte encontra-se na pasta [src](https://github.com/GNGCJS/SoonToBeInvisible/tree/main/src)
-- Os capitulos do relatório estão na pasta [doc](https://github.com/GNGCJS/SoonToBeInvisible/tree/main/doc)
+- Os capítulos do relatório estão na pasta [doc](https://github.com/GNGCJS/SoonToBeInvisible/tree/main/doc)
 
 # Galeria
+## Desktop
+|          ![index](https://i.imgur.com/EmVjfwo.png)           |         ![Animais](https://i.imgur.com/q13NqKH.png)          |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+|                      **Página inicial**                      |               **Página com todos os animais**                |
+|         ![Detalhes](https://i.imgur.com/bitm7Pg.png)         |         ![Galeria](https://i.imgur.com/mC9N4K5.png)          |
+| **Página com os detalhes do animal escolhido anteriormente** | **Página da galeria com todas as fotos dos animais existentes** |
+|         ![Contacto](https://i.imgur.com/GzJgcgn.png)         |          ![Sobre](https://i.imgur.com/i3XFS9d.png)           |
+| **Página para os utilizadores contacterem os criadores do website em caso de dúvida, querer ajudar, ou reportarem um bug** |    **Página com a informação sobre a criação do projeto**    |
+
+## Mobile
+|          ![indexM](https://i.imgur.com/I7Rg1mz.png)          |         ![animaisM](https://i.imgur.com/TO8ZxI7.png)         |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+|                      **Página incial**                       |               **Página com todos os animais**                |
+|        ![detalhesM](https://i.imgur.com/Bn4gOQE.png)         |         ![galeriaM](https://i.imgur.com/0dSNEmB.png)         |
+| **Página com os detalhes do animal escolhido anteriormente** | **Página da galeria com todas as fotos dos animais existentes** |
+|        ![contactoM](https://i.imgur.com/s1dvlGC.png)         |          ![sobreM](https://i.imgur.com/QdLPyfA.png)          |
+| **Página para os utilizadores contacterem os criadores do website em caso de dúvida, querer ajudar, ou reportarem um bug** |    **Página com a informação sobre a criação do projeto**    |
 
 # Tecnologias
 
