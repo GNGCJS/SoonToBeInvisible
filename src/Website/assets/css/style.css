@@ -242,6 +242,18 @@
 /*fim propriedades diferentes para as navbars de cada página*/
 
 /*fundo navar mobile diferente para todas as páginas*/
+.animais .navbar_mobile .fundo{
+    background-color: rgba(171, 167, 190, 100);
+}
+
+.animais .navbar_mobile .fundo:hover{
+    background-color: rgba(146, 142, 163, 100);
+}
+
+.animais .navbar_mobile .nav_active{
+    background-color: rgba(113, 101, 167, 100);
+}
+
 .sobre .navbar_mobile .fundo{
     background-color: rgba(20, 120, 175, 0.7);
 }
@@ -1218,48 +1230,6 @@
         padding: 10px;
     }
     /*fim conteudo da navbar*/
-
-    /*conteudo da navbar mobile*/
-    .animais .navbar_mobile .fundo{
-        background-color: rgba(171, 167, 190, 100);
-    }
-
-    .animais .navbar_mobile .nav_active{
-        background-color: rgba(113, 101, 167, 100);
-    }
-
-    .galeria .navbar_mobile .fundo{
-        background-color: rgba(217, 172, 167);
-    }
-    
-    .galeria .navbar_mobile .fundo:hover{
-        background-color: rgba(181, 136, 130);
-    }
-    
-    .galeria .navbar_mobile .nav_active{
-        background-color: rgba(183, 123, 116);
-    }
-
-    .sobre .navbar_mobile .fundo{
-        background-color: rgba(20, 120, 175, 70);
-    }
-    
-    .sobre .navbar_mobile .nav_active{
-        background-color: rgba(0, 54, 84, 70);
-    }
-    
-    .contacto .navbar_mobile .fundo{
-        background-color: rgba(166, 185, 199, 70);
-    }
-    
-    .contacto .navbar_mobile .fundo:hover{
-        background-color: rgba(135, 157, 173, 70);
-    }
-    
-    .contacto .navbar_mobile .nav_active{
-        background-color: rgba(0, 54, 84, 70);
-    }
-    /*fim conteudo da navbar mobile*/
 
     /*conteudo pagina galeria*/
     .galeria .caixa{
