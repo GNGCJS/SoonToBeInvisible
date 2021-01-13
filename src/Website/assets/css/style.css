@@ -428,6 +428,8 @@
     -webkit-filter: blur(0);
     -ms-filter: blur(0px);
     transform: scale(2);
+    -moz-transform: scale(2);
+    -webkit-transform: scale(2);
     transition: .5s;
 }
 .index .content .options li:hover a, .index .content .options li:hover .btt{
@@ -649,6 +651,8 @@
     height: auto;
     top: 50%;
     transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
 
 .detalhes .rect .rect_esq .img_show .seta_esquerda:hover, .detalhes .rect .rect_esq .img_show .seta_direita:hover{
@@ -662,6 +666,8 @@
 .detalhes .rect .rect_esq .img_show .seta_direita .seta{
     right: 0;
     transform: translateY(-50%) rotate(180deg);
+    -moz-transform: translateY(-50%) rotate(180deg);
+    -webkit-transform: translateY(-50%) rotate(180deg);
 }
 
 .detalhes .rect .rect_esq .seta_esquerda{
@@ -808,6 +814,9 @@
     bottom: 100px;
     right: 5%;
     transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    
 }
 
 .galeria .left-bar {
@@ -819,6 +828,8 @@
     height: 10px;
     display: block;
     transform: rotate(35deg);
+    -moz-transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
     float: right;
     border-radius: 2px;
 }
@@ -843,6 +854,8 @@
     height: 10px;
     display: block;
     transform: rotate(-35deg);
+    -moz-transform: rotate(-35deg);
+    -webkit-transform: rotate(-35deg);
     float: right;
     border-radius: 2px;
 }
@@ -1036,6 +1049,8 @@
     height: 160px;
     margin: 0 100px;
     transform: rotate(-30deg) skew(25deg);
+    -moz-transform: rotate(-30deg) skew(25deg);
+    -webkit-transform: rotate(-30deg) skew(25deg);
     background: #cccccc;
   }
   
@@ -1059,26 +1074,36 @@
   
   .contacto .li_socials:hover .social_span:nth-child(5) {
     transform: translate(40px, -40px);
+    -moz-transform: translate(40px, -40px);
+    -webkit-transform: translate(40px, -40px);
     opacity: 1;
   }
   
   .contacto .li_socials:hover .social_span:nth-child(4) {
     transform: translate(30px, -30px);
+    -moz-transform: translate(30px, -30px);
+    -webkit-transform: translate(30px, -30px);
     opacity: 0.8;
   }
   
   .contacto .li_socials:hover .social_span:nth-child(3) {
     transform: translate(20px, -20px);
+    -moz-transform: translate(20px, -20px);
+    -webkit-transform: translate(20px, -20px);
     opacity: 0.6;
   }
   
   .contacto .li_socials:hover .social_span:nth-child(2) {
     transform: translate(10px, -10px);
+    -moz-transform: translate(10px, -10px);
+    -webkit-transform: translate(10px, -10px);
     opacity: 0.4;
   }
   
   .contacto .li_socials:hover .social_span:nth-child(1) {
     transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
     opacity: 0.2;
   }
   
