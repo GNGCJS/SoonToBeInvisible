@@ -81,7 +81,7 @@ app.post("/animais", (req, res) => {
     res.statusCode = 200;
     
     res.end(() => {
-        console.log("Page animals rendered!");
+        console.log("Página animais renderizada com sucesso!");
     });
 });
 
@@ -129,7 +129,7 @@ app.post("/galeria", (req, res) => {
     res.statusCode = 200;
 
     res.end(() => {
-        console.log("Page galery rendered");
+        console.log("Página galeria renderizada com sucesso!");
     })
 
 });
@@ -241,8 +241,17 @@ app.post("/detalhes", (req, res) => {
     res.statusCode = 200;
 
     res.end(() => {
-        console.log("Page details rendered");
+        console.log("Página detalhes renderizada com sucesso!");
     })
+});
+
+app.post("/received", (req, res) => {
+    const {email, nome, ultimo, report} = req.body;
+
+    console.log(`\nO utlizador com o email:${email}\nColocou a seguinte dúvida:${report}`);
+    console.log(`O primeiro e último nome do utilizador são ${nome} ${ultimo}.`);
+
+    res.sendFile(path.join(ws, "contacto.html"))
 });
 
 app.listen(port, console.log(`Server listening in port ${port}`));
