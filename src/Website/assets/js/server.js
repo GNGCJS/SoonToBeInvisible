@@ -207,9 +207,13 @@ app.post("/detalhes", (req, res) => {
                 res.write("</div>");
                 res.write("<span class='helper'></span>");
                 if(String(animal["photos"][0]["photo"][0]) !== ""){
+                    res.write(`<a href='${String(animal["photos"][0]["photo"][0])}' target='blank'>`);
                     res.write(`<img class='detalhes_img' src="${String(animal["photos"][0]["photo"].shift())}" alt='${String(animal["comum"]).replace(" ", "").replace("'", "")}' />`);                
+                    res.write("</a>");
                     animal["photos"][0]["photo"].forEach(foto => {
+                        res.write(`<a href='${String(foto)}' target='blank'>`);
                         res.write(`<img class='detalhes_img hidden' src="${String(foto)}" alt='${String(animal["comum"]).replace(" ", "").replace("'", "")}' />`);
+                        res.write("</a>");
                     });
                 }
                 else{
